@@ -20,5 +20,5 @@ To run the Kumar Web Works Website locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/abdullah-agency.git
+   git clone https://github.com/KumarWebWorks/KumarWebWorks-Agency.git
    ```
