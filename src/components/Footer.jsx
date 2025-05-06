@@ -141,7 +141,7 @@ const NewsletterForm = () => {
         />
         <input type="text" name="_honey" className="hidden"/>
 <input type="hidden" name="_captcha" value="false"/>
-<input type="hidden" name="_next" value="http://localhost:3000/thanks"/>
+<input type="hidden" name="_next" value="http://kumarwebworks.com/thanks"/>
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
