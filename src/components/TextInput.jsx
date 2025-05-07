@@ -1,13 +1,15 @@
 import React, { useId } from "react";
 
-const TextInput = ({ label, ...props }) => {
+const TextInput = ({ label,required, ...props }) => {
   const id = useId();
   return (
     <div className="group relative z-0 transition-all focus-within:z-10">
       <input
         type="text"
+        
         id={id}
         {...props}
+        required={required}
         placeholder=" "
         className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
