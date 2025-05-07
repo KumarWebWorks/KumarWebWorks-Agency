@@ -1,6 +1,6 @@
 # Kumar Web Works - Next.js, Tailwind CSS & Framer Motion
 
-![Kumar Web Works](/public/agency.PNG)
+
 
 Kumar Web Works is a stunning multi-page agency website template developed using Next.js, Tailwind CSS, and Framer Motion. Designed and built by the talented Tailwind CSS team, this template offers a sleek and minimalist appearance while boasting engaging interactive elements and captivating animations powered by Framer Motion.
 
@@ -20,5 +20,5 @@ To run the Kumar Web Works Website locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/abdullah-agency.git
+   git clone https://github.com/KumarWebWorks/KumarWebWorks-Agency.git
    ```
