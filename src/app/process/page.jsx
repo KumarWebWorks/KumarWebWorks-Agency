@@ -7,7 +7,7 @@ import Values from "@/components/Values";
 import React from "react";
 
 export const metadata = {
-  title: "Our Process",
+  title: "Our Process | Kumar Web Works",
   description: "From discovery to deployment — see how Kumar Web Works transforms client ideas into fully deployed digital solutions.",
 };
 

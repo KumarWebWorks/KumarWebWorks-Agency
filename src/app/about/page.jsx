@@ -6,7 +6,7 @@ import { StatList, StatListItem } from "@/components/StatList";
 import React from "react";
 
 export const metadata = {
-  title: "About Us",
+  title: "About Us | Kumar Web Works",
   description: "Learn about the mission, team, and values behind Kumar Web Works — your trusted web and app development partner.",
 };
 
