@@ -25,6 +25,7 @@ export function constructMetadata({
       creator: "@kumarWebWorks",
     },
     icons,
+    metadataBase: new URL("https://kumarwebworks.com/"),
     themeColor: "#FFF",
     ...(noIndex && {
       robots: {
