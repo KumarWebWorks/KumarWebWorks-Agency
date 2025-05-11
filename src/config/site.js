@@ -1,6 +1,6 @@
 export function constructMetadata({
-  title = "kumar web works ",
-  description = "kumar web works",
+  title = "Kumar Web Works - React & Spring Boot Web Development",
+  description = "Kumar Web Works offers top-notch website development services in India using React , Next , Java Spring Boot, and modern UI/UX practices. we also offer App Application Devlopment",
   image = "/agency.PNG",
   icons = "/favicon.ico",
   noIndex = false,
@@ -25,7 +25,6 @@ export function constructMetadata({
       creator: "@kumarWebWorks",
     },
     icons,
-    // metadataBase: new URL("https://agency-website-abdullah.vercel.app/"),
     themeColor: "#FFF",
     ...(noIndex && {
       robots: {

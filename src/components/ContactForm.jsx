@@ -46,7 +46,7 @@ const ContactForm = () => {
                 name="budget"
                 value="5-10"
                 required
-                defaultChecked
+                
               />
               <RadioInput
                 label="&#8377;10,000 – &#8377;25,000"
