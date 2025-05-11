@@ -5,7 +5,7 @@ import clsx from "clsx";
 const List = ({ className, children }) => {
   return (
     <FadeInStagger>
-      <ul role="list" className={clsx("text-base text-neutral-600", className)}>
+      <ul role="list" className={clsx("text-sm text-neutral-600  tracking-wide", className)}>
         {children}
       </ul>
     </FadeInStagger>
@@ -18,9 +18,12 @@ export const ListItem = ({ title, children }) => {
       <FadeIn>
         <Border className="pt-10 group-first:pt-0 group-first:before:hidden group-first:after:hidden">
           {title && (
-            <strong className="font-semibold text-neutral-950">{`${title}. `}</strong>
+            <strong className="text-base font-semibold text-neutral-950">{`${title}. `} <br/> </strong>
           )}
-          {children}
+          <span className="text-sm">
+           {children}
+          </span>
+          
         </Border>
       </FadeIn>
     </li>

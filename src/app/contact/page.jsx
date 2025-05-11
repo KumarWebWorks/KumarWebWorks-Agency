@@ -3,9 +3,8 @@ import ContactForm from "@/components/ContactForm";
 import Container from "@/components/Container";
 import PageIntro from "@/components/PageIntro";
 export const metadata = {
-  title: "Kumar Web Works - React & Spring Boot Web Development",
-  description:
-    "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot. We also provide mobile app development and UI/UX services.",
+  title: "Contact",
+  description: "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business.",
 };
 
 const ContactPage = () => {

@@ -29,17 +29,19 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: {
-    template: "%s | Kumar Web Works",
-    default: "Kumar Web Works",
-  },
+  title:  "Kumar Web Works",
   description:
     "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot.",
 };
 
 export default function Root({ children }) {
   return (
-    <html lang="en" className="h-full bg-neutral-950 text-base antialiased text-neutral-100">
+    <html lang="en" className="h-full bg-neutral-950 text-base antialiased text-neutral-100"
+    
+    >
+      {/* <title></title>
+<meta name="description" content="We build fast, modern websites for startups and small businesses. Contact Kumar Web Works today."> */}
+
       <body className={`${inter.className} flex min-h-full flex-col`}>
         <RootLayout>{children}</RootLayout>
       </body>
