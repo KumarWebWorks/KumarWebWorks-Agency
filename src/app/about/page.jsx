@@ -6,10 +6,10 @@ import { StatList, StatListItem } from "@/components/StatList";
 import React from "react";
 
 export const metadata = {
-  title: "Kumar Web Works - React & Spring Boot Web Development",
-  description:
-    "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot. We also provide mobile app development and UI/UX services.",
+  title: "About Us",
+  description: "Learn about the mission, team, and values behind Kumar Web Works — your trusted web and app development partner.",
 };
+
 
 const AboutPage = () => {
   return (

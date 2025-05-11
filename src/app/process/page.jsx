@@ -7,10 +7,10 @@ import Values from "@/components/Values";
 import React from "react";
 
 export const metadata = {
-  title: "Kumar Web Works - React & Spring Boot Web Development",
-  description:
-    "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot. We also provide mobile app development and UI/UX services.",
+  title: "Our Process",
+  description: "From discovery to deployment — see how Kumar Web Works transforms client ideas into fully deployed digital solutions.",
 };
+
 
 const ProcessPage = () => {
   return (

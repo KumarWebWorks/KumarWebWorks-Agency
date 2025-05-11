@@ -9,7 +9,7 @@ export const metadata = {
 const Thanks = () => {
   return (
     <>
-      <PageIntro eyebrow="Thanks You" title="We Will Connect Before An Hour">
+      <PageIntro eyebrow="Thanks You" title="Quick response guaranteed — we'll contact you within an hour.">
         <p>
         We’re excited to talk with you. Let’s make something great together.
         </p>
