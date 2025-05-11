@@ -11,7 +11,7 @@ import WorkList from "@/components/WorkList";
 // import {useShowMore} from"@/hooks/useShowMore";
 
 export const metadata = {
-  title: "Our Work",
+  title: "Our Work | Kumar Web Works",
   description: "Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
 };
 
