@@ -8,6 +8,12 @@ import StylizedImage from "@/components/StylizedImage";
 import imageLaptop from "@/images/laptop.jpg";
 import List, { ListItem } from "@/components/List";
 
+export const metadata = {
+  title: "Kumar Web Works - React & Spring Boot Web Development",
+  description:
+    "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot. We also provide mobile app development and UI/UX services.",
+};
+
 const WorkPage = () => {
   const [showMore, setShowMore] = useState(false);
 
