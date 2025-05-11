@@ -1,5 +1,11 @@
 import PageIntro from "@/components/PageIntro";
 
+export const metadata = {
+  title: "Kumar Web Works - React & Spring Boot Web Development",
+  description:
+    "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot. We also provide mobile app development and UI/UX services.",
+};
+
 const Thanks = () => {
   return (
     <>
