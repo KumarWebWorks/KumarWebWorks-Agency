@@ -35,13 +35,13 @@
   </url>
 
   <!-- Services Page -->
-  <url>
+  <!-- <url>
     <loc>https://www.kumarwebworks.com/services</loc>
     <lastmod>2025-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <link rel="canonical" href="https://www.kumarwebworks.com/services" />
-  </url>
+   
+  </url> -->
 
   <!-- Contact Page with alternate languages -->
   <url>
