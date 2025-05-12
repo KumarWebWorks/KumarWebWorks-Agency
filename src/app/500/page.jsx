@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const Error = () => {
+export default function Custom500 () {
   const [mail, setmail] = useState(true);
   const handlesetmail = () => {
     setmail(!mail);
@@ -31,13 +31,6 @@ const Error = () => {
           Go to the home page
         </Link>
 
-        {/* <a
-            href="mailto:kuamrwebworks@gmail.com?subject=Error Report&body=Describe the issue you faced:"
-          className="mt-10 text-sm font-semibold text-neutral-950 transition hover:text-neutral-700"
-        > */}
-        {/*         
-          Report Error 
-        </a> */}
         <section
           onClick={handlesetmail}
           className="mt-16 w-full flex justify-center text-sm font-semibold text-neutral-950 transition hover:text-neutral-700"
@@ -52,4 +45,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+
