@@ -7,7 +7,35 @@ import Testimonials from "@/components/Testimonials";
 import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
 
 export default function Home() {
+    const jsonLdData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kumar Web Works",
+    "url": "https://www.kumarwebworks.com",
+    "logo": "https://www.kumarwebworks.com/images/laptop.jpg",
+    "description": "Expert web and app development services.",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+91-9942488298",
+      "contactType": "customer service"
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/company/kumarwebworks",
+      "https://twitter.com/kumarwebworks",
+      "https://www.facebook.com/kumarwebworks"
+    ]
+  };
+
   return (
+    <>
+    <Head>
+        <title>Kumar Web Works | Expert Web & App Development</title>
+        <meta name="description" content="Expert web and app development services for businesses." />
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLdData)}
+        </script>
+      </Head>
+    
     <main className="text-black">
       <Container className="mt-24 sm:mt-32">
         <FadeIn className="max-w-3xl">
@@ -33,5 +61,6 @@ export default function Home() {
       <Services />
       <ContactSection />
     </main>
+    </>
   );
 }
