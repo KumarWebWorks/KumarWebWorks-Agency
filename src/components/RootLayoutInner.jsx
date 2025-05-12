@@ -1,12 +1,12 @@
+// components/RootLayoutInner.jsx
 "use client";
-import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
+import { HiMenuAlt4 } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
 import Container from "./Container";
 import Link from "next/link";
 import Logo from "./Logo";
-import { HiMenuAlt4 } from "react-icons/hi";
-import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 import clsx from "clsx";
 import Offices from "./Offices";
@@ -204,22 +204,4 @@ const RootLayoutInner = ({ children }) => {
     </MotionConfig>
   );
 };
-
-const RootLayout = ({ children }) => {
-  const pathName = usePathname();
-  return <RootLayoutInner key={pathName}>{children}</RootLayoutInner>;
-};
-
-export default RootLayout;
-
-// components/RootLayout.jsx
-// "use client";
-// import { usePathname } from "next/navigation";
-// import RootLayoutInner from "@/components/RootLayoutInner";
-
-// const RootLayout = ({ children }) => {
-//   const pathName = usePathname();
-//   return <RootLayoutInner key={pathName}>{children}</RootLayoutInner>;
-// };
-
-// export default RootLayout;
+export default RootLayoutInner;
