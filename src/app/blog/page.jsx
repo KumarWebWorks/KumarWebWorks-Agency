@@ -1,3 +1,4 @@
+import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 
 // export const metadata = {

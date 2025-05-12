@@ -1,6 +1,7 @@
 import ContactDetails from "@/components/ContactDetails";
 import ContactForm from "@/components/ContactForm";
 import Container from "@/components/Container";
+import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 // export const metadata = {
 //   title: "Contact | Kumar Web Works",
