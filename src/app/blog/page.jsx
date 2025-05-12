@@ -1,7 +1,7 @@
 import PageIntro from "@/components/PageIntro";
 
 export const metadata = {
-  title: "Blog",
+  title: "Blog | Kumar Web Works",
   description: "Stay updated with the latest web development trends, tips, and insights from Kumar Web Works' expert team.",
 };
 
