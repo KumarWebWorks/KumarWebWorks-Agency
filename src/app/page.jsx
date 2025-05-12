@@ -2,6 +2,7 @@ import Clients from "@/components/Clients";
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
+import Meta from "@/components/Meta";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
@@ -29,13 +30,17 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-        <title>Kumar Web Works | Expert Web & App Development</title>
-        <meta name="description" content="Expert web and app development services for businesses." />
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLdData)}
-        </script>
-      </Head>
+    
+       
+        <Meta
+  title="Kumar Web Works | Expert Web & App Development"
+  description="Expert web and app development services for businesses."
+  url="https://kumarwebworks.com/"
+  image="https://kumarwebworks.com/images/laptop.jpg"
+  jsonLd={jsonLdData}
+/>
+
+      
     
     <main className="text-black">
       <Container className="mt-24 sm:mt-32">
