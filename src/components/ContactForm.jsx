@@ -47,7 +47,7 @@ const ContactForm = () => {
             autoComplete="tel"
             required
           />
-          <TextInput label="Message" name="message" required />
+          
           
            <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
            
@@ -129,6 +129,7 @@ const ContactForm = () => {
                 value="50-100"
               />
             </div>
+            
             <input type="text" name="_honey" className="hidden" />
             <input type="hidden" name="_captcha" value="false" />
             <input
@@ -137,12 +138,15 @@ const ContactForm = () => {
               value="http://kumarwebworks.com/thanks"
             />
           </div>
+           <TextInput label="Message" name="message" required />
         </div>
           <fieldset className=" mt-5 px-6 py-8">
               <legend className= " text-sm/4 text-neutral-500"> Note: If your project serves humanity or contributes to the well-being of others — and lacks a profitable motive — we would be honored to support you free of cost. Let’s build something meaningful together. 
        </legend>
             </fieldset>
-        <Button type="submit" className=""
+           
+            
+        <Button type="submit" className="mt-5"
         
         >
           Let’s work together

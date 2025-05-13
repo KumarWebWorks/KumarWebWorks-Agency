@@ -1,6 +1,7 @@
 import FadeIn, { FadeInStagger } from "./FadeIn";
 import Border from "./Border";
 import clsx from "clsx";
+import Button from "./Button";
 
 const List = ({ className, children }) => {
   return (
@@ -23,8 +24,9 @@ export const ListItem = ({ title, children }) => {
           <span className="text-sm">
            {children}
           </span>
-          
+          <Button className={" block my-4 float-right"}>See More</Button>
         </Border>
+        
       </FadeIn>
     </li>
   );
