@@ -96,24 +96,18 @@ const Services = () => {
           {/* List item */}
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+                 we build complete, high-performance websites — from pixel-perfect UI to powerful backend systems. Whether it's a marketing site, e-commerce platform, admin dashboard, or custom web app, we deliver fast, secure, and fully responsive solutions tailored to your goals.
             </ListItem>
-            <ListItem title="App development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks.
-            </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past one years.
-            </ListItem>
+          <ListItem title="App Development">
+  Our expert team builds fast, reliable, and user-friendly mobile apps using the latest frameworks and technologies. From sleek UI/UX to powerful backend integration, we deliver scalable apps tailored for both iOS and Android.
+</ListItem>
+
+            
+
             <ListItem title="Desktop App">
-              We build custom desktop apps that actually do what you need — not
-              just another bloated installer. Think performance, stability, and
-              zero internet required.
-            </ListItem>
+  We develop powerful, lightweight desktop applications with a focus on performance, stability, and offline functionality. Whether it's for Windows, macOS, or cross-platform, our solutions are tailored to do exactly what your business needs — no bloat, just results.
+</ListItem>
+
           </List>
         </div>
       </Container>
