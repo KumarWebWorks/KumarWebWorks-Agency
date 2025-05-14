@@ -19,12 +19,12 @@ export const ListItem = ({ title, children }) => {
       <FadeIn>
         <Border className="pt-10 group-first:pt-0 group-first:before:hidden group-first:after:hidden">
           {title && (
-            <strong className="text-base font-semibold text-neutral-950">{`${title}. `} <br/> </strong>
+            <strong className="text-base font-medium text-neutral-950">{`${title}. `} <br/> </strong>
           )}
           <span className="text-sm">
            {children}
           </span>
-          <Button className={" block my-4 float-right"}>See More</Button>
+          {/* <Button className={" block my-4 float-right"}>See More</Button> */}
         </Border>
         
       </FadeIn>

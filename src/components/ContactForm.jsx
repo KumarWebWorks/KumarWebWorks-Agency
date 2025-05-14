@@ -140,13 +140,13 @@ const ContactForm = () => {
           </div>
            <TextInput label="Message" name="message" required />
         </div>
-          <fieldset className=" mt-5 px-6 py-8">
+          <fieldset className=" mt-5 px-6 py-4">
               <legend className= " text-sm/4 text-neutral-500"> Note: If your project serves humanity or contributes to the well-being of others — and lacks a profitable motive — we would be honored to support you free of cost. Let’s build something meaningful together. 
        </legend>
             </fieldset>
            
             
-        <Button type="submit" className="mt-5"
+        <Button type="submit" className=""
         
         >
           Let’s work together
