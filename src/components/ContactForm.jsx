@@ -106,7 +106,7 @@ const ContactForm = () => {
             </fieldset>
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
               <RadioInput
-                label="&#8377;5,000 – &#8377;10,000"
+                label="₹5,000 – ₹10,000"
                 name="budget"
                 value="5-10"
                 required
@@ -114,17 +114,17 @@ const ContactForm = () => {
                 
               />
               <RadioInput
-                label="&#8377;10,000 – &#8377;25,000"
+                label="₹10,000 – ₹25,000"
                 name="budget"
                 value="10-25"
               />
               <RadioInput
-                label="&#8377;25,000 – &#8377;50,000"
+                label="₹25,000 – ₹50,000"
                 name="budget"
                 value="25-50"
               />
               <RadioInput
-                label="More than &#8377;50,000"
+                label="More than ₹50,000"
                 name="budget"
                 value="50-100"
               />
