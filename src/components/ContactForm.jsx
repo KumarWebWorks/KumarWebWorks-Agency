@@ -62,44 +62,6 @@ const ContactForm = () => {
             
             </div>
 
-           {/* <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-            <fieldset>
-              <legend className="text-base/6 text-neutral-500">Services</legend>
-            </fieldset>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <RadioInput
-                label="Web Designing"
-                name="Services"
-                value="Web  Designing"
-                required
-                
-              />
-              <RadioInput
-                label="Frontend Devlopment"
-                name="Services"
-                value="Frontend Devlopment"
-              />
-              
-              
-              <RadioInput
-                label="Backend Devlopment"
-                name="Services"
-                value="Backend Devlopment"
-              />
-             
-              <RadioInput
-                label="Full stack  Devlopment"
-                name="Services"
-                value="Full stack  Devlopment"
-              />
-              
-              
-              <fieldset>
-              <legend className="text-base/6 text-neutral-500">"fgk"</legend>
-            </fieldset>
-              
-            </div>
-            </div> */}
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
