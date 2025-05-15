@@ -1,10 +1,11 @@
 import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 
-// export const metadata = {
-//   title: "Blog | Kumar Web Works",
-//   description: "Stay updated with the latest web development trends, tips, and insights from Kumar Web Works' expert team.",
-// };
+export const metadata = {
+ title:"Our Blog – Tech Insights from Kumar Web Works",
+        description:"Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team."
+       };
+
 
 const BlogPage = () => {
 
