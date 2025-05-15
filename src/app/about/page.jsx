@@ -8,8 +8,13 @@ import React from "react";
 
 export const metadata = {
   title:"About Us – Learn More About Kumar Web Works",
-  description:"Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions."
-  };
+  description:"Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions.",
+   metadataBase: new URL("https://www.kumarwebworks.com/about"),
+  alternates: {
+    canonical: "/about",
+  },
+         };
+  
 
 
 const AboutPage = () => {

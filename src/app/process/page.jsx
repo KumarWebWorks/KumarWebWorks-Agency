@@ -12,6 +12,10 @@ import React from "react";
 export const metadata = {
   title: "Our Process | Kumar Web Works",
   description: "From discovery to deployment — see how Kumar Web Works transforms client ideas into fully deployed digital solutions.",
+   metadataBase: new URL("https://www.kumarwebworks.com/process"),
+  alternates: {
+    canonical: "/process",
+  },
 };
 
 
