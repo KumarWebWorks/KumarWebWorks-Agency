@@ -30,13 +30,44 @@ const ContactPage = () => {
   };
   return (
     <>
-     <Meta
+     {/* <Meta
   title = "Contact | Kumar Web Works"
   description = "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business."
   url="https://kumarwebworks.com/blog"
   image="https://kumarwebworks.com/images/laptop.jpg"
   jsonLd={jsonLdData}
+/> */}
+
+<Meta
+  title="Contact Us – Let's Connect at Kumar Web Works"
+  description="Have questions or ideas? Reach out to the Kumar Web Works team and let's bring your vision to life!"
+  url="https://www.kumarwebworks.com/contact"
+  image="https://www.kumarwebworks.com/images/agency.PNG"
+  keywords="contact us, Kumar Web Works, web development inquiries, connect"
 />
+
+
+
+{/* <Meta
+  title="Our Work – Projects and Case Studies from Kumar Web Works"
+  description="Discover our portfolio showcasing successful projects and case studies at Kumar Web Works."
+  url="https://www.kumarwebworks.com/work"
+  image="https://www.kumarwebworks.com/images/work-og.jpg"
+  keywords="portfolio, case studies, web development projects, Kumar Web Works"
+/>
+
+
+<Meta
+  title="About Us – Learn More About Kumar Web Works"
+  description="Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions."
+  url="https://www.kumarwebworks.com/about"
+  image="https://www.kumarwebworks.com/images/about-og.jpg"
+  keywords="about us, Kumar Web Works, web development team, company mission"
+/> */}
+
+
+
+
       <PageIntro eyebrow="Contact us" title="Let’s work together">
         <p>We can not wait to hear from you.</p>
       </PageIntro>

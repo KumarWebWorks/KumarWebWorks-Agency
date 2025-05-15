@@ -34,13 +34,20 @@ const AboutPage = () => {
 
   return (
     <>
-         <Meta
+         {/* <Meta
   title = "About Us | Kumar Web Works"
   description = "Learn about the mission, team, and values behind Kumar Web Works — your trusted web and app development partner."
   url="https://kumarwebworks.com/about"
   image="https://kumarwebworks.com/images/laptop.jpg"
   jsonLd={jsonLdData}
-/>
+/> */}
+<Meta
+  title="About Us – Learn More About Kumar Web Works"
+  description="Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions."
+  url="https://www.kumarwebworks.com/about"
+  image="https://www.kumarwebworks.com/images/agency.PNG"
+  keywords="about us, Kumar Web Works, web development team, company mission"
+/> 
       <PageIntro eyebrow="About us" title="Our strength is collaboration">
         <p>
           We believe that our strength lies in our collaborative approach, which

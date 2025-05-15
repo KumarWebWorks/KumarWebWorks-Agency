@@ -4,11 +4,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Kumar Web Works",
-  description:
-    "Kumar Web Works offers top-notch website and app development using React, Next.js, and Java Spring Boot.",
-};
+
 
 export default function Root({ children }) {
   return (
@@ -16,6 +12,15 @@ export default function Root({ children }) {
       lang="en"
       className="h-full bg-neutral-950 text-base antialiased text-neutral-100"
     >
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." />
+        <meta name="keywords" content="kumar, kumarweb, kumarwebworks , website kumar , kumar website , kumarweb website , kumar portfolio , web devlopment , app devlopment , web agency" />
+        <meta name="author" content="Sahil Kumar" />
+        <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={`${inter.className} flex min-h-full flex-col`}>
         <RootLayout>{children}</RootLayout>
       </body>
