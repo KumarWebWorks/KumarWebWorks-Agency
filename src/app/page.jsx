@@ -2,7 +2,6 @@ import Clients from "@/components/Clients";
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
-
 import Meta from "@/components/Meta";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -15,7 +14,11 @@ import Script from "next/script";
 
 export const metadata = {
   title:"Kumar Web Works – Top-Tier Web & App Development Agency",
-  description:"Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works."
+  description:"Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works.",
+  metadataBase: new URL("https://www.kumarwebworks.com"),
+  alternates: {
+    canonical: "/",
+  },
          };
 
 export default function Home() {
