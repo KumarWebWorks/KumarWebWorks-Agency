@@ -59,8 +59,8 @@ const serviceDescriptions = [
   }, {
     name: "Custom Software Soution",
     items: [
-      // { label: "Non Profitable - Related to Humanity (Free Of Cost)", type: "included" },
-      // { label: "Other Software Solution", type: "included" },
+      { label: "Non Profitable - Related to Humanity (Free Of Cost)", type: "included" },
+      { label: "Other Software Solution", type: "included" },
      
     
     

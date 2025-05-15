@@ -10,13 +10,10 @@ import SelectService from "./SelectService";
 const ContactForm = () => {
 
   const data = serviceDescriptions;
-  console.log(data)
+  
     
 
-  //  const handleService = (service) =>{
-  //   // if(service === 4) data="full stack Devloment"
-   
-  //  }
+  
   return (
     <FadeIn>
       <form action="https://formsubmit.co/kumarwebworks@gmail.com" method="POST"

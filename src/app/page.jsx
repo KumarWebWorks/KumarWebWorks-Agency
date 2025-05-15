@@ -2,11 +2,16 @@ import Clients from "@/components/Clients";
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
+
 import Meta from "@/components/Meta";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
 import Head from "next/head";
+import Script from "next/script";
+
+
+
 
 export const metadata = {
   title:"Kumar Web Works – Top-Tier Web & App Development Agency",
@@ -14,24 +19,7 @@ export const metadata = {
          };
 
 export default function Home() {
-    const jsonLdData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Kumar Web Works",
-    "url": "https://www.kumarwebworks.com",
-    "logo": "https://www.kumarwebworks.com/agency.PNG",
-    "description": "Expert web and app development services.",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-9942488298",
-      "contactType": "customer service"
-    }],
-    "sameAs": [
-      "https://www.linkedin.com/company/kumarwebworks",
-      "https://twitter.com/kumarwebworks",
-      "https://www.facebook.com/kumarwebworks"
-    ]
-  };
+ 
 
   return (
     <>
@@ -41,7 +29,7 @@ export default function Home() {
   title="Kumar Web Works – Top-Tier Web & App Development Agency"
   description="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." 
   url="https://kumarwebworks.com/"
-  image="https://kumarwebworks.com/images/laptop.jpg"
+  image="https://kumarwebworks.com/favicon.ico"
   
 />
  <Head>
@@ -60,9 +48,13 @@ export default function Home() {
         <link rel="canonical" href="https://www.kumarwebworks.com/" />
       </Head>
 
-      
+      <Script
+  src="https://example.com/analytics.js"
+  strategy="lazyOnload"
+/>
     
     <main className="text-black">
+      
       <Container className="mt-24 sm:mt-32">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">

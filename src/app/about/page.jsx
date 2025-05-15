@@ -6,41 +6,18 @@ import PageIntro from "@/components/PageIntro";
 import { StatList, StatListItem } from "@/components/StatList";
 import React from "react";
 
-// export const metadata = {
-//   title: "About Us | Kumar Web Works",
-//   description: "Learn about the mission, team, and values behind Kumar Web Works — your trusted web and app development partner.",
-// };
+export const metadata = {
+  title:"About Us – Learn More About Kumar Web Works",
+  description:"Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions."
+  };
 
 
 const AboutPage = () => {
-     const jsonLdData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "About Us | Kumar Web Works",
-    "url": "https://www.kumarwebworks.com/about",
-    "logo": "https://www.kumarwebworks.com/images/laptop.jpg",
-    "description": "Learn about the mission, team, and values behind Kumar Web Works — your trusted web and app development partner.",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-9942488298",
-      "contactType": "customer service"
-    }],
-    "sameAs": [
-      "https://www.linkedin.com/company/kumarwebworks",
-      "https://twitter.com/kumarwebworks",
-      "https://www.facebook.com/kumarwebworks"
-    ]
-  };
+ 
 
   return (
     <>
-         {/* <Meta
-  title = "About Us | Kumar Web Works"
-  description = "Learn about the mission, team, and values behind Kumar Web Works — your trusted web and app development partner."
-  url="https://kumarwebworks.com/about"
-  image="https://kumarwebworks.com/images/laptop.jpg"
-  jsonLd={jsonLdData}
-/> */}
+       
 <Meta
   title="About Us – Learn More About Kumar Web Works"
   description="Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions."
@@ -48,6 +25,7 @@ const AboutPage = () => {
   image="https://www.kumarwebworks.com/images/agency.PNG"
   keywords="about us, Kumar Web Works, web development team, company mission"
 /> 
+
       <PageIntro eyebrow="About us" title="Our strength is collaboration">
         <p>
           We believe that our strength lies in our collaborative approach, which

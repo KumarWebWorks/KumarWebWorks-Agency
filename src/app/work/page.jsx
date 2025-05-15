@@ -9,7 +9,7 @@ import imageLaptop from "@/images/laptop.jpg";
 import List, { ListItem } from "@/components/List";
 import WorkList from "@/components/WorkList";
 import Meta from "@/components/Meta";
-// import {useShowMore} from"@/hooks/useShowMore";
+
 
 
 export const metadata = {
@@ -20,26 +20,7 @@ export const metadata = {
 
 
 const WorkPage = () => {
-  //  const {showMore , toggle} = useShowMore();
-
-   const jsonLdData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Our Work | Kumar Web Works",
-    "url": "https://www.kumarwebworks.com/work",
-    "logo": "https://www.kumarwebworks.com/hero.jpg",
-    "description": "Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-9942488298",
-      "contactType": "customer service"
-    }],
-    "sameAs": [
-      "https://www.linkedin.com/company/kumarwebworks",
-      "https://twitter.com/kumarwebworks",
-      "https://www.facebook.com/kumarwebworks"
-    ]
-  };
+  
 
   
   const initialLinks = [
@@ -75,12 +56,13 @@ const WorkPage = () => {
   return (
     <>
      <Meta
-        title={jsonLdData.name}
-        description={jsonLdData.description}
-        url={jsonLdData.url}
-        image={jsonLdData.logo}
+        title={metadata.name}
+        description={metadata.description}
+        url="https://www.kumarwebworks.com/work"
+        image="https://www.kumarwebworks.com/favicon.ico"
         keywords="our work, Kumar Web Works, web development, portfolio, digital solutions"
       />
+       
       <PageIntro
         eyebrow="Our work"
         title="Proven solutions for real-world problems."

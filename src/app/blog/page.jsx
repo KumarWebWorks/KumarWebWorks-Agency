@@ -1,5 +1,7 @@
+
 import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
+
 
 export const metadata = {
  title:"Our Blog – Tech Insights from Kumar Web Works",
@@ -9,33 +11,9 @@ export const metadata = {
 
 const BlogPage = () => {
 
-  //  const jsonLdData = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Organization",
-  //   "name": "Blog | Kumar Web Works",
-  //   "url": "https://www.kumarwebworks.com/blog",
-  //   "logo": "https://www.kumarwebworks.com/images/laptop.jpg",
-  //   "description": "Stay updated with the latest web development trends, tips, and insights from Kumar Web Works' expert team.",
-  //   "contactPoint": [{
-  //     "@type": "ContactPoint",
-  //     "telephone": "+91-9942488298",
-  //     "contactType": "customer service"
-  //   }],
-  //   "sameAs": [
-  //     "https://www.linkedin.com/company/kumarwebworks",
-  //     "https://twitter.com/kumarwebworks",
-  //     "https://www.facebook.com/kumarwebworks"
-  //   ]
-  // };
   return (
     <> 
-        {/* <Meta
-  title = "Blog | Kumar Web Works"
-  description = "Stay updated with the latest web development trends, tips, and insights from Kumar Web Works' expert team."
-  url="https://kumarwebworks.com/blog"
-  image="https://kumarwebworks.com/images/laptop.jpg"
-  jsonLd={jsonLdData}
-/> */}
+      
 <Meta
         title="Our Blog – Tech Insights from Kumar Web Works"
         description="Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team."
@@ -43,6 +21,7 @@ const BlogPage = () => {
         image="https://www.kumarwebworks.com/agency.PNG"
         keywords="web dev blog, fullstack tips, react tutorials, spring boot insights"
       />
+       
       <PageIntro eyebrow="Blog" title="The latest articles and news">
         <p>
           Stay up-to-date with the latest industry news as our marketing teams
