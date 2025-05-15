@@ -31,14 +31,29 @@ export default function Home() {
   return (
     <>
     
-       
+{/*        
         <Meta
   title="Kumar Web Works | Expert Web & App Development"
   description="Expert web and app development services for businesses."
   url="https://kumarwebworks.com/"
   image="https://kumarwebworks.com/images/laptop.jpg"
   jsonLd={jsonLdData}
-/>
+/> */}
+ <Head>
+        <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
+        <meta name="description" content="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Kumar Web Works – Top-Tier Web & App Development Agency" />
+        <meta property="og:description" content="Custom web and app development solutions tailored to your business needs." />
+        <meta property="og:image" content="https://www.kumarwebworks.com/images/team/angela-fisher.jpg" />
+        <meta property="og:url" content="https://www.kumarwebworks.com/" />
+        <meta property="og:site_name" content="Kumar Web Works" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kumar Web Works – Top-Tier Web & App Development Agency" />
+        <meta name="twitter:description" content="Custom web and app development solutions tailored to your business needs." />
+        <meta name="twitter:image" content="https://www.kumarwebworks.com/images/og-banner.jpg" />
+        <link rel="canonical" href="https://www.kumarwebworks.com/" />
+      </Head>
 
       
     
