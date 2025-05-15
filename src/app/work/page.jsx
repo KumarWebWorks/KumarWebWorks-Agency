@@ -12,6 +12,10 @@ import Meta from "@/components/Meta";
 // import {useShowMore} from"@/hooks/useShowMore";
 
 
+export const metadata = {
+  title:"Our Work | Kumar Web Works – Learn More About Kumar Web Works",
+  description:"Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
+    };
 
 
 
@@ -23,7 +27,7 @@ const WorkPage = () => {
     "@type": "Organization",
     "name": "Our Work | Kumar Web Works",
     "url": "https://www.kumarwebworks.com/work",
-    "logo": "https://www.kumarwebworks.com/images/laptop.jpg",
+    "logo": "https://www.kumarwebworks.com/hero.jpg",
     "description": "Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
     "contactPoint": [{
       "@type": "ContactPoint",

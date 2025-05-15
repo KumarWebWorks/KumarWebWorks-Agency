@@ -3,10 +3,10 @@ import ContactForm from "@/components/ContactForm";
 import Container from "@/components/Container";
 import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
-// export const metadata = {
-//   title: "Contact | Kumar Web Works",
-//   description: "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business.",
-// };
+export const metadata = {
+   title : "Contact | Kumar Web Works",
+  description : "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business."
+  };
 
 const ContactPage = () => {
 

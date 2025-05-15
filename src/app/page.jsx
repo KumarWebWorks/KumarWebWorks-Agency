@@ -8,6 +8,11 @@ import Testimonials from "@/components/Testimonials";
 import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
 import Head from "next/head";
 
+export const metadata = {
+  title:"Kumar Web Works – Top-Tier Web & App Development Agency",
+  description:"Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works."
+         };
+
 export default function Home() {
     const jsonLdData = {
     "@context": "https://schema.org",
@@ -31,14 +36,14 @@ export default function Home() {
   return (
     <>
     
-{/*        
+       
         <Meta
-  title="Kumar Web Works | Expert Web & App Development"
-  description="Expert web and app development services for businesses."
+  title="Kumar Web Works – Top-Tier Web & App Development Agency"
+  description="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." 
   url="https://kumarwebworks.com/"
   image="https://kumarwebworks.com/images/laptop.jpg"
-  jsonLd={jsonLdData}
-/> */}
+  
+/>
  <Head>
         <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
         <meta name="description" content="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." />
