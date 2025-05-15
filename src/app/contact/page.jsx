@@ -7,7 +7,12 @@ import PageIntro from "@/components/PageIntro";
 
 export const metadata = {
    title : "Contact | Kumar Web Works",
-  description : "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business."
+  description : "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business.",
+   metadataBase: new URL("https://www.kumarwebworks.com/contact"),
+  alternates: {
+    canonical: "/contact",
+  },
+         
   };
 
 const ContactPage = () => {

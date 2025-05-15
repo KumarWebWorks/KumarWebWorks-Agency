@@ -15,6 +15,10 @@ import Meta from "@/components/Meta";
 export const metadata = {
   title:"Our Work | Kumar Web Works – Learn More About Kumar Web Works",
   description:"Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
+   metadataBase: new URL("https://www.kumarwebworks.com/work"),
+  alternates: {
+    canonical: "/work",
+  },
     };
 
 

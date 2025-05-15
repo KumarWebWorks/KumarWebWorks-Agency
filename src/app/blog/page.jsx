@@ -5,7 +5,12 @@ import PageIntro from "@/components/PageIntro";
 
 export const metadata = {
  title:"Our Blog – Tech Insights from Kumar Web Works",
-        description:"Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team."
+        description:"Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team.",
+         metadataBase: new URL("https://www.kumarwebworks.com/blog"),
+  alternates: {
+    canonical: "/blog",
+  },
+         
        };
 
 
