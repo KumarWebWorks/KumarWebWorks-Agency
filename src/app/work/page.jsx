@@ -11,10 +11,7 @@ import WorkList from "@/components/WorkList";
 import Meta from "@/components/Meta";
 // import {useShowMore} from"@/hooks/useShowMore";
 
-export const metadata = {
-  title: "Our Work | Kumar Web Works",
-  description: "Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
-};
+
 
 
 
@@ -74,12 +71,12 @@ const WorkPage = () => {
   return (
     <>
      <Meta
-  title = "Our Work | Kumar Web Works"
-  description = "Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot."
-  url="https://kumarwebworks.com/work"
-  image="https://kumarwebworks.com/images/laptop.jpg"
-  jsonLd={jsonLdData}
-/>
+        title={jsonLdData.name}
+        description={jsonLdData.description}
+        url={jsonLdData.url}
+        image={jsonLdData.logo}
+        keywords="our work, Kumar Web Works, web development, portfolio, digital solutions"
+      />
       <PageIntro
         eyebrow="Our work"
         title="Proven solutions for real-world problems."

@@ -34,16 +34,8 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Services Page -->
-  <!-- <url>
-    <loc>https://www.kumarwebworks.com/services</loc>
-    <lastmod>2025-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-   
-  </url> -->
-
-  <!-- Contact Page with alternate languages -->
+ 
+  <!-- Contact Page -->
   <url>
     <loc>https://www.kumarwebworks.com/contact</loc>
     <lastmod>2025-05-12</lastmod>
@@ -53,7 +45,7 @@
     
   </url>
 
-  <!-- Process Page with alternate languages -->
+  <!-- Process Page  -->
   <url>
     <loc>https://www.kumarwebworks.com/process</loc>
     <lastmod>2025-05-12</lastmod>
@@ -63,7 +55,7 @@
     
   </url>
 
-   <!-- Work Page with alternate languages -->
+   <!-- Work Page  -->
   <url>
     <loc>https://www.kumarwebworks.com/work</loc>
     <lastmod>2025-05-12</lastmod>
@@ -73,36 +65,8 @@
     
   </url>
 
-  <!-- Video Page 
-  <url>
-    <loc>https://www.kumarwebworks.com/videos/introduction</loc>
-    <lastmod>2025-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <video:video>
-      <video:loc>https://www.kumarwebworks.com/videos/introduction.mp4</video:loc>
-      <video:title>Introduction to Kumar Web Works</video:title>
-      <video:description>Discover our expertise in web and app development.</video:description>
-      <video:thumbnail_loc>https://www.kumarwebworks.com/images/video-thumbnail.jpg</video:thumbnail_loc>
-    </video:video>
-  </url>
-  -->
+ 
 
-  <!-- News Page 
-  <url>
-    <loc>https://www.kumarwebworks.com/news</loc>
-    <lastmod>2025-05-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <news:news>
-      <news:publication>
-        <news:name>Kumar Web Works News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-05-12</news:publication_date>
-      <news:title>Latest trends in web development</news:title>
-    </news:news>
-  </url>
-  -->
+  
 
 </urlset>

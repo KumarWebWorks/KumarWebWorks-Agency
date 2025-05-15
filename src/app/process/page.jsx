@@ -35,13 +35,13 @@ const ProcessPage = () => {
   };
   return (
     <>
-      <Meta
-  title = "Our Process | Kumar Web Works"
-  description = "From discovery to deployment — see how Kumar Web Works transforms client ideas into fully deployed digital solutions."
-  url="https://kumarwebworks.com/process"
-  image="https://kumarwebworks.com/images/laptop.jpg"
-  jsonLd={jsonLdData}
-/>
+     <Meta
+        title={metadata.title}
+        description={metadata.description}
+        url="https://www.kumarwebworks.com/process"
+        image="https://www.kumarwebworks.com/images/agency.PNG" // Update this image URL as needed
+        keywords="our process, Kumar Web Works, web development process, digital solutions"
+      />
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
           We believe in efficiency and maximizing our resources to provide the
