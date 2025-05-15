@@ -13,19 +13,19 @@ function WorkList() {
     {
       title: "Foodie App",
       description: "A modern food delivery app with real-time tracking.",
-      image: "https://i.imgur.com/8ALzZGF.png",
+      image: "https://kumarwebworks.com/hero.jpg",
       techStack: ["React Native", "Firebase", "Express"],
     },
     {
       title: "Portfolio Site",
       description: "A personal portfolio to showcase web development projects.",
-      image: "https://i.imgur.com/8ALzZGF.png",
+      image: "https://kumarwebworks.com/hero.jpg",
       techStack: ["React", "Tailwind CSS", "Vite"],
     },
     {
       title: "Booking Platform",
       description: "An online hotel booking service and travel booking service.",
-      image: "https://i.imgur.com/8ALzZGF.png",
+      image: "https://kumarwebworks.com/hero.jpg",
       techStack: ["Next.js", "MongoDB", "Node.js"],
     },
   ];
