@@ -18,7 +18,7 @@ export default function BlogCard() {
    
 <div className=" rounded-lg pb-3">
   
-    <h5 className="  xl:text-2xl  md:text-lg  sm:text-base font-bold tracking-tight  text-slate-100">
+    <h5 className="mt-2  xl:text-2xl  md:text-lg  sm:text-base font-bold tracking-tight  text-slate-100">
         Noteworthy technology acquisitions 2021
       </h5>
       <p className="font-normal text-gray-400 ">
