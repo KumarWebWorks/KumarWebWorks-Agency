@@ -7,12 +7,37 @@ import { StatList, StatListItem } from "@/components/StatList";
 import React from "react";
 
 export const metadata = {
-  title:"About Us – Learn More About Kumar Web Works",
-  description:"Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions.",
-   metadataBase: new URL("https://www.kumarwebworks.com/about"),
+  title: "About Us – Learn More About Kumar Web Works",
+  description: "Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions.",
+  metadataBase: new URL("https://www.kumarwebworks.com/about"),
   alternates: {
     canonical: "/about",
   },
+  openGraph: {
+    title: "About Us – Learn More About Kumar Web Works",
+    description: "Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions.",
+    url: "https://www.kumarwebworks.com/about",
+    siteName: "Kumar Web Works",
+    images: [
+      {
+        url: "https://kumarwebworks.com/favicon.ico",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us – Learn More About Kumar Web Works",
+    description: "Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions.",
+    images: ["https://kumarwebworks.com/favicon.ico"],
+  },
+     
+   robots: "index, follow",
+  keywords: "about us, web development, app development, react, next.js, spring boot, freelance developer, agency",
+  type: "website",
+  locale: "en_US",  
          };
   
 
@@ -24,11 +49,8 @@ const AboutPage = () => {
     <>
        
 <Meta
-  title="About Us – Learn More About Kumar Web Works"
-  description="Get to know the team behind Kumar Web Works and our mission to deliver exceptional web solutions."
-  url="https://www.kumarwebworks.com/about"
-  image="https://www.kumarwebworks.com/images/agency.PNG"
-  keywords="about us, Kumar Web Works, web development team, company mission"
+      {...metadata}
+       
 /> 
 
       <PageIntro eyebrow="About us" title="Our strength is collaboration">

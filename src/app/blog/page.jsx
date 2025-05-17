@@ -11,12 +11,36 @@ import clsx from "clsx";
 
 
 export const metadata = {
- title:"Our Blog – Tech Insights from Kumar Web Works",
-        description:"Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team.",
-         metadataBase: new URL("https://www.kumarwebworks.com/blog"),
+  title: "Our Blog – Tech Insights from Kumar Web Works",
+  description: "Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team.",
+  metadataBase: new URL("https://www.kumarwebworks.com/blog"),      
   alternates: {
     canonical: "/blog",
+  }, 
+  openGraph: {
+    title: "Our Blog – Tech Insights from Kumar Web Works",
+    description: "Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team.",
+    url: "https://www.kumarwebworks.com/blog",
+    siteName: "Kumar Web Works",
+    images: [
+      {
+        url: "https://www.kumarwebworks.com/agency.PNG",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Blog – Tech Insights from Kumar Web Works",
+    description: "Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team.",
+    images: ["https://www.kumarwebworks.com/agency.PNG"],
+  },
+  robots: "index, follow",
+  keywords: "web dev blog, fullstack tips, react tutorials, spring boot insights",
+  type: "website",
+  locale: "en_US", 
          
        };
 
@@ -29,11 +53,7 @@ const BlogPage = () => {
     <> 
       
 <Meta
-        title="Our Blog – Tech Insights from Kumar Web Works"
-        description="Explore web dev tutorials, case studies, and expert tips from the Kumar Web Works team."
-        url="https://www.kumarwebworks.com/blog"
-        image="https://www.kumarwebworks.com/agency.PNG"
-        keywords="web dev blog, fullstack tips, react tutorials, spring boot insights"
+        {...metadata}
       />
        
       <PageIntro eyebrow="Blog" title="The latest articles and news">
@@ -54,10 +74,10 @@ const BlogPage = () => {
 
              
             
-             <BlogCard />
             <BlogCard />
             <BlogCard />
-              <BlogCard />
+            <BlogCard />
+            <BlogCard />
             <BlogCard />
             <BlogCard />
           </div>

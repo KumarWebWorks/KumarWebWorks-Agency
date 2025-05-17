@@ -13,12 +13,36 @@ import Meta from "@/components/Meta";
 
 
 export const metadata = {
-  title:"Our Work | Kumar Web Works – Learn More About Kumar Web Works",
-  description:"Explore our portfolio of high-performance websites and apps built with React, Next.js, and Java Spring Boot.",
-   metadataBase: new URL("https://www.kumarwebworks.com/work"),
+  title: "Our Work – Proven Solutions for Real-World Problems",
+  description: "Explore our portfolio of successful projects and discover how we can help you achieve your goals.",
+  metadataBase: new URL("https://www.kumarwebworks.com/work"),
   alternates: {
     canonical: "/work",
   },
+  openGraph: {
+    title: "Our Work – Proven Solutions for Real-World Problems",
+    description: "Explore our portfolio of successful projects and discover how we can help you achieve your goals.",
+    url: "https://www.kumarwebworks.com/work",
+    siteName: "Kumar Web Works",
+    images: [
+      {
+        url: "https://www.kumarwebworks.com/favicon.ico",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Work – Proven Solutions for Real-World Problems",
+    description: "Explore our portfolio of successful projects and discover how we can help you achieve your goals.",
+    images: ["https://www.kumarwebworks.com/favicon.ico"],
+  },
+  robots: "index, follow",
+  keywords: "our work, Kumar Web Works, web development, portfolio, digital solutions",
+  type: "website",
+  locale: "en_US",
     };
 
 
@@ -59,13 +83,9 @@ const WorkPage = () => {
 
   return (
     <>
-     <Meta
-        title={metadata.name}
-        description={metadata.description}
-        url="https://www.kumarwebworks.com/work"
-        image="https://www.kumarwebworks.com/favicon.ico"
-        keywords="our work, Kumar Web Works, web development, portfolio, digital solutions"
-      />
+    <Meta
+            {...metadata}
+          />
        
       <PageIntro
         eyebrow="Our work"

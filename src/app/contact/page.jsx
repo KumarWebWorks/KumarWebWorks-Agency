@@ -6,12 +6,37 @@ import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 
 export const metadata = {
-   title : "Contact | Kumar Web Works",
-  description : "Have a project in mind? Reach out to Kumar Web Works for custom web and app development solutions tailored to your business.",
-   metadataBase: new URL("https://www.kumarwebworks.com/contact"),
+  title: "Contact Us – Let's Connect at Kumar Web Works",
+  description: "Have questions or ideas? Reach out to the Kumar Web Works team and let's bring your vision to life!",
+  metadataBase: new URL("https://www.kumarwebworks.com/contact"),
   alternates: {
     canonical: "/contact",
+  },  
+  openGraph: {
+    title: "Contact Us – Let's Connect at Kumar Web Works",
+    description: "Have questions or ideas? Reach out to the Kumar Web Works team and let's bring your vision to life!",
+    url: "https://www.kumarwebworks.com/contact",
+    siteName: "Kumar Web Works",
+    images: [
+      {
+        url: "https://www.kumarwebworks.com/images/agency.PNG",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us – Let's Connect at Kumar Web Works",
+    description: "Have questions or ideas? Reach out to the Kumar Web Works team and let's bring your vision to life!",
+    images: ["https://www.kumarwebworks.com/images/agency.PNG"],
+  },
+  robots: "index, follow",
+  keywords: "contact us, Kumar Web Works, web development inquiries, connect",
+  type: "website",
+  locale: "en_US",
+ 
          
   };
 
@@ -22,12 +47,8 @@ const ContactPage = () => {
      
 
 <Meta
-  title="Contact Us – Let's Connect at Kumar Web Works"
-  description="Have questions or ideas? Reach out to the Kumar Web Works team and let's bring your vision to life!"
-  url="https://www.kumarwebworks.com/contact"
-  image="https://www.kumarwebworks.com/images/agency.PNG"
-  keywords="contact us, Kumar Web Works, web development inquiries, connect"
-/>
+        {...metadata}
+      />
 
 
 
