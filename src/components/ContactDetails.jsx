@@ -27,12 +27,12 @@ const ContactDetails = () => {
           ].map(([label, email]) => ( */}
           {/* key={email} */}
             <div >
-              <dt className="font-semibold text-neutral-950">double click to mail</dt>
+              <dt className="font-semibold text-neutral-950"></dt>
               <dd>
                 <Link
-                  // href={`mailto:kumarwebworks@gmail.com`}
-                  onDoubleClick={() =>
-                    window.open("mailto:kumarwebworks@gmail.com")}
+                  href={`mailto:kumarwebworks@gmail.com`}
+                  // onDoubleClick={() =>
+                  //   window.open("mailto:kumarwebworks@gmail.com")}
                   className="text-neutral-600 hover:text-neutral-950"
                 >
                   kumarwebworks@gmail.com

@@ -1,5 +1,5 @@
-src/hooks/useShowMore.js
-"use client"
+// src/hooks/useShowMore.js
+// "use client"
 import { useState } from "react";
 
 export function useShowMore() {
