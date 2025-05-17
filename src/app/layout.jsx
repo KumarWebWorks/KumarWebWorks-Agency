@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Root({ children }) {
   return (
+   
     <html
       lang="en"
       className="h-full bg-neutral-950 text-base antialiased text-neutral-100"
@@ -23,8 +24,10 @@ export default function Root({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${inter.className} flex min-h-full flex-col`}>
+        
         <RootLayout>{children}</RootLayout>
       </body>
     </html>
+   
   );
 }

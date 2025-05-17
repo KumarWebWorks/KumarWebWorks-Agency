@@ -41,13 +41,13 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kumar Web Works – Top-Tier Web & App Development Agency" />
         <meta property="og:description" content="Custom web and app development solutions tailored to your business needs." />
-        <meta property="og:image" content="https://www.kumarwebworks.com/agency.PNG" />
+        <meta property="og:image" content="https://kumarwebworks.com/favicon.ico" />
         <meta property="og:url" content="https://www.kumarwebworks.com/" />
         <meta property="og:site_name" content="Kumar Web Works" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kumar Web Works – Top-Tier Web & App Development Agency" />
         <meta name="twitter:description" content="Custom web and app development solutions tailored to your business needs." />
-        <meta name="twitter:image" content="https://www.kumarwebworks.com/agency.PNG" />
+        <meta name="twitter:image" content="https://kumarwebworks.com/favicon.ico" />
         <link rel="canonical" href="https://www.kumarwebworks.com/" />
       </Head>
 
