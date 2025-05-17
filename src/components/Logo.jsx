@@ -48,16 +48,22 @@ const Logo = ({ invert, href, className, children, ...props }) => {
     );
   }
   return (
-    <h2
+    <h1
       className={clsx(
-        "cursor-pointer text-2xl font-semibold duration-300 ",
+        // Mobile-first styles
+        "cursor-pointer text-lg font-medium duration-300",
+        // For screens ≥640px and up
+        "sm:text-2xl sm:font-semibold",
+        // "cursor-pointer text-2xl font-semibold duration-300 ",
+        // // "sm:text-xs sm:font-semibold",
         className
       )}
-      // {...props}
+       {...props}
       
     >
-      Kumar Web Works
-    </h2>
+      {/* Kumar Web Works */}
+      {children}
+    </h1>
   );
 };
 
