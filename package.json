@@ -10,6 +10,7 @@
     "postinstall": "flowbite-react patch"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "autoprefixer": "10.4.15",
     "clsx": "^2.0.0",
     "eslint": "8.47.0",
