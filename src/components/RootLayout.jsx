@@ -13,6 +13,8 @@ import Offices from "./Offices";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 
+
+
 const Header = ({
   panelId,
   invert = false,
@@ -22,13 +24,18 @@ const Header = ({
   toggleRef,
 }) => {
   // Container
+    const [showIncluded, setShowIncluded] = useState(true);
   return (
     <Container>
       <div className="flex items-center justify-between">
+        
         {/* Logo */}
         <Link href={"/"} aria-label="Home">
-          <Logo invert={invert}>Kumar web works</Logo>
+          <Logo invert={invert}></Logo>
         </Link>
+        {/* <div >
+          <DarkThemeToggle />
+          </div> */}
         <div className="flex items-center gap-x-8">
           <Button href={"/contact"} invert={invert}>
             Contact us
@@ -53,8 +60,29 @@ const Header = ({
                   : "fill-neutral-950 group-hover:fill-neutral-700"
               )}
             />
+          
           </button>
+          {/* Toggle Button */}
+              {/* <motion.button
+                type="button"
+                onClick={() => setShowIncluded((prev) => !prev)}
+                className={`relative w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ${
+                  showIncluded ? "bg-green-600" : "bg-red-600"
+                }`}
+                initial={false}
+                animate={{ backgroundColor: showIncluded ? "#22c55e" : "#ef4444" }}
+              >
+                <motion.div
+                  layout
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  className="w-4 h-4 bg-white rounded-full shadow-md"
+                  style={{
+                    x: showIncluded ? "24px" : "0px",
+                  }}
+                />
+              </motion.button> */}
         </div>
+        
       </div>
     </Container>
   );

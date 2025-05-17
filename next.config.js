@@ -1,6 +1,8 @@
-const withFlowbiteReact = require("flowbite-react/plugin/nextjs");
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  experimental: {
+    appDir: true, // ✅ valid
+  },
+}
 
-module.exports = withFlowbiteReact(nextConfig)
+module.exports = nextConfig;

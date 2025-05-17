@@ -50,10 +50,12 @@ const Logo = ({ invert, href, className, children, ...props }) => {
   return (
     <h1
       className={clsx(
+        "cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl  font-semibold duration-300 ",
+        
         // Mobile-first styles
-        "cursor-pointer text-lg font-medium duration-300",
+        //  "cursor-pointer sm:text-lg sm:font-medium sm:duration-300",
         // For screens ≥640px and up
-        "cursor-pointer text-2xl font-semibold duration-300 ",
+        
         // "cursor-pointer text-2xl font-semibold duration-300 ",
         // // "sm:text-xs sm:font-semibold",
         className
@@ -61,8 +63,8 @@ const Logo = ({ invert, href, className, children, ...props }) => {
        {...props}
       
     >
-      {/* Kumar Web Works */}
-      {children}
+      Kumar Web Works
+     
     </h1>
   );
 };
