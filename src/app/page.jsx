@@ -12,13 +12,38 @@ import Script from "next/script";
 
 
 
+
 export const metadata = {
-  title:"Kumar Web Works – Top-Tier Web & App Development Agency",
-  description:"Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works.",
-  metadataBase: new URL("https://www.kumarwebworks.com"),
+  title: "Kumar Web Works – Top-Tier Web & App Development Agency",
+  description: "Get a stunning website, powerful mobile app, or tailor-made desktop software — delivered fast and built to scale.",
+  metadataBase: new URL("https://www.kumarwebworks.com/"),
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: "Kumar Web Works – Top-Tier Web & App Development Agency",
+    description: "Get a stunning website, powerful mobile app, or tailor-made desktop software — delivered fast and built to scale.",
+    url: "https://www.kumarwebworks.com/",
+    siteName: "Kumar Web Works",
+    images: [
+      {
+        url: "https://kumarwebworks.com/favicon.ico",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kumar Web Works – Top-Tier Web & App Development Agency",
+    description: "Get a stunning website, powerful mobile app, or tailor-made desktop software — delivered fast and built to scale.",
+    images: ["https://kumarwebworks.com/favicon.ico"],
+  },
+  robots: "index, follow",
+  keywords: "web development, app development, react, next.js, spring boot, freelance developer, agency",
+  type: "website",
+  locale: "en_US",
          };
 
 export default function Home() {
@@ -29,13 +54,11 @@ export default function Home() {
     
        
         <Meta
-  title="Kumar Web Works – Top-Tier Web & App Development Agency"
-  description="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." 
-  url="https://kumarwebworks.com/"
-  image="https://kumarwebworks.com/favicon.ico"
-  
+ {...metadata}   
+
+
 />
- <Head>
+ {/* <Head>
         <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
         <meta name="description" content="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." />
         <meta property="og:type" content="website" />
@@ -49,7 +72,7 @@ export default function Home() {
         <meta name="twitter:description" content="Custom web and app development solutions tailored to your business needs." />
         <meta name="twitter:image" content="https://kumarwebworks.com/favicon.ico" />
         <link rel="canonical" href="https://www.kumarwebworks.com/" />
-      </Head>
+      </Head> */}
 
       <Script
   src="https://example.com/analytics.js"

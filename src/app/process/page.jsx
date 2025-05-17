@@ -10,12 +10,37 @@ import Values from "@/components/Values";
 import React from "react";
 
 export const metadata = {
-  title: "Our Process | Kumar Web Works",
-  description: "From discovery to deployment — see how Kumar Web Works transforms client ideas into fully deployed digital solutions.",
-   metadataBase: new URL("https://www.kumarwebworks.com/process"),
+  title: "Our Process – How Kumar Web Works Delivers Excellence",
+  description: "Discover the streamlined process that powers our web and app development projects at Kumar Web Works.",
+  metadataBase: new URL("https://www.kumarwebworks.com/process"),
   alternates: {
     canonical: "/process",
   },
+  openGraph: {
+    title: "Our Process – How Kumar Web Works Delivers Excellence",
+    description: "Discover the streamlined process that powers our web and app development projects at Kumar Web Works.",
+    url: "https://www.kumarwebworks.com/process",
+    siteName: "Kumar Web Works",
+    images: [
+      {
+        url: "https://www.kumarwebworks.com/images/agency.PNG",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Process – How Kumar Web Works Delivers Excellence",
+    description: "Discover the streamlined process that powers our web and app development projects at Kumar Web Works.",
+    images: ["https://www.kumarwebworks.com/images/agency.PNG"],
+  },
+  robots: "index, follow",
+  keywords: "our process, Kumar Web Works, web development process, digital solutions",
+  type: "website",
+  locale: "en_US",
+ 
 };
 
 
@@ -24,13 +49,9 @@ const ProcessPage = () => {
   
   return (
     <>
-     <Meta
-        title={metadata.title}
-        description={metadata.description}
-        url="https://www.kumarwebworks.com/process"
-        image="https://www.kumarwebworks.com/images/agency.PNG" // Update this image URL as needed
-        keywords="our process, Kumar Web Works, web development process, digital solutions"
-      />
+    <Meta
+            {...metadata}
+          />
        
       <PageIntro eyebrow="Our process" title="How we work">
         <p>

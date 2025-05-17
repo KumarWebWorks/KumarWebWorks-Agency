@@ -71,20 +71,20 @@ const serviceDescriptions = [
 
 export default function SelectService() {
   const [selectedService, setSelectedService] = useState("");
-  const [showIncluded, setShowIncluded] = useState(true);
+  // const [showIncluded, setShowIncluded] = useState(true);
 
   const handleSelection = (event) => {
     setSelectedService(event.target.value);
-    setShowIncluded(true); // reset toggle on service change
+    // setShowIncluded(true); // reset toggle on service change
   };
 
   const selected = serviceDescriptions.find(
     (service) => service.name === selectedService
   );
 
-  const featuresToDisplay = selected
-    ? selected.items.filter(item => item.type === (showIncluded ? "included" : "excluded"))
-    : [];
+  // const featuresToDisplay = selected
+  //   ? selected.items.filter(item => item.type === (showIncluded ? "included" : "excluded"))
+  //   : [];
 
   return (
     <div>
@@ -117,33 +117,9 @@ export default function SelectService() {
             transition={{ duration: 0.4 }}
             className="mt-6"
           >
-            <fieldset className="flex items-center justify-between">
-              {/* <legend className="text-sm text-neutral-500">
-                {showIncluded
-                  ? `We have Experienced${selected.name}`
-                  : `What’s Not Included in ${selected.name}`}
-              </legend> */}
-
-              {/* Toggle Button */}
-              {/* <motion.button
-                type="button"
-                onClick={() => setShowIncluded((prev) => !prev)}
-                className={`relative w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ${
-                  showIncluded ? "bg-green-600" : "bg-red-600"
-                }`}
-                initial={false}
-                animate={{ backgroundColor: showIncluded ? "#22c55e" : "#ef4444" }}
-              >
-                <motion.div
-                  layout
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                  className="w-4 h-4 bg-white rounded-full shadow-md"
-                  style={{
-                    x: showIncluded ? "24px" : "0px",
-                  }}
-                />
-              </motion.button> */}
-            </fieldset>
+            {/* <fieldset className="flex items-center justify-between">
+             
+            </fieldset> */}
 
             <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-700">
               {featuresToDisplay.map((feature, index) => (
