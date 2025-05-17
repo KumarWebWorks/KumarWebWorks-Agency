@@ -24,7 +24,7 @@ const Header = ({
   toggleRef,
 }) => {
   // Container
-    const [showIncluded, setShowIncluded] = useState(true);
+    // const [showIncluded, setShowIncluded] = useState(true);
   return (
     <Container>
       <div className="flex items-center justify-between">

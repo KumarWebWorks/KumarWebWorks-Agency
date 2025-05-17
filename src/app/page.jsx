@@ -55,8 +55,6 @@ export default function Home() {
        
         <Meta
  {...metadata}   
-
-
 />
  {/* <Head>
         <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
