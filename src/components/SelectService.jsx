@@ -2,26 +2,21 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
 const serviceDescriptions = [
-
   {
-  name: "Website",
-  items: [
-    { label: "Landing Page Design & Development", type: "included" },
-    { label: "E-commerce Website", type: "included" },
-    { label: "Portfolio Website", type: "included" },
-    { label: "Blog / News Website", type: "included" },
-    { label: "Booking / Appointment System", type: "included" },
-    
-    { label: "SEO Optimization (Basic On-Page SEO)", type: "included" },
-    { label: "Speed Optimization", type: "included" },
-    { label: "Custom Website Development", type: "included" },
-
-    // { label: "Advanced 3D Model Integration", type: "excluded" },
-    // { label: "Full UI/UX Design (Standalone)", type: "excluded" },
-    // { label: "Web Designing as a Separate Service", type: "excluded" }
-  ]
-},
+    name: "Website",
+    items: [
+      { label: "Landing Page Design & Development", type: "included" },
+      { label: "E-commerce Website", type: "included" },
+      { label: "Portfolio Website", type: "included" },
+      { label: "Blog / News Website", type: "included" },
+      { label: "Booking / Appointment System", type: "included" },
+      { label: "SEO Optimization (Basic On-Page SEO)", type: "included" },
+      { label: "Speed Optimization", type: "included" },
+      { label: "Custom Website Development", type: "included" },
+    ],
+  },
   {
     name: "Mobile App",
     items: [
@@ -33,15 +28,8 @@ const serviceDescriptions = [
       { label: "QR-Based Ordering System", type: "included" },
       { label: "OTP Login & Firebase Auth", type: "included" },
       { label: "Custom App Development", type: "included" },
-     
-      
-      // { label: "Website", type: "excluded" },
-      // { label: "RESTful API Development", type: "excluded" },
-      // { label: "Authentication & Authorization", type: "excluded" },
-      // { label: "Deployment & DevOps Basics", type: "excluded" },
     ],
   },
-
   {
     name: "Desktop App",
     items: [
@@ -53,45 +41,37 @@ const serviceDescriptions = [
       { label: "Learning Management System (LMS)", type: "included" },
       { label: "Chat & Community Platform", type: "included" },
       { label: "Custom Desktop Application", type: "included" },
-    
-    
     ],
-  }, {
-    name: "Custom Software Soution",
+  },
+  {
+    name: "Custom Software Solution",
     items: [
-      { label: "Non Profitable - Related to Humanity (Free Of Cost)", type: "included" },
+      {
+        label: "Non Profitable - Related to Humanity (Free Of Cost)",
+        type: "included",
+      },
       { label: "Other Software Solution", type: "included" },
-     
-    
-    
     ],
-  }
- 
+  },
 ];
 
 export default function SelectService() {
   const [selectedService, setSelectedService] = useState("");
-  // const [showIncluded, setShowIncluded] = useState(true);
 
   const handleSelection = (event) => {
     setSelectedService(event.target.value);
-    // setShowIncluded(true); // reset toggle on service change
   };
 
   const selected = serviceDescriptions.find(
     (service) => service.name === selectedService
   );
 
-  // const featuresToDisplay = selected
-  //   ? selected.items.filter(item => item.type === (showIncluded ? "included" : "excluded"))
-  //   : [];
+  const featuresToDisplay = selected
+    ? selected.items.filter((item) => item.type === "included")
+    : [];
 
   return (
     <div>
-      {/* <fieldset>
-        <legend className="text-base/6 text-neutral-500">Services</legend>
-      </fieldset> */}
-
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
         {serviceDescriptions.map((service, index) => (
           <label key={index} className="flex gap-x-3 cursor-pointer">
@@ -117,10 +97,6 @@ export default function SelectService() {
             transition={{ duration: 0.4 }}
             className="mt-6"
           >
-            {/* <fieldset className="flex items-center justify-between">
-             
-            </fieldset> */}
-
             <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-700">
               {featuresToDisplay.map((feature, index) => (
                 <motion.li
