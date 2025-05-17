@@ -36,7 +36,7 @@ const Header = ({
         {/* <div >
           <DarkThemeToggle />
           </div> */}
-        <div className="flex items-center gap-x-8">
+        <div className="flex items-center sm:gap-x-4 gap-x-8">
           <Button href={"/contact"} invert={invert}>
             Contact us
           </Button>
