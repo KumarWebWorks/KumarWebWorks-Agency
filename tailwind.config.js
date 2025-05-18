@@ -3,6 +3,7 @@ const flowbiteReact = require("flowbite-react/plugin/tailwindcss");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class", // <-- ✅ Enables dark mode via 'class="dark"'
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",

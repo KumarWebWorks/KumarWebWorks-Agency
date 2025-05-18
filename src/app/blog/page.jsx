@@ -7,7 +7,8 @@ import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 import React from "react";
 import clsx from "clsx";
-import { DraggableCardDemo } from "@/components/DraggableCardDemo";
+import { GlowingEffectDemoSecond } from "@/components/GlowingEffectDemoSecond";
+
 
 
 
@@ -70,8 +71,12 @@ const BlogPage = () => {
         <FadeIn>
 
 
+       <div >
+  <GlowingEffectDemoSecond className="dark"/>
+</div>
+
           
-          <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-12 md:gap-y-8  lg:gap-x-8 md:gap-x-6 gap-8 p-2">
+          {/* <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-12 md:gap-y-8  lg:gap-x-8 md:gap-x-6 gap-8 p-2">
 
              
             
@@ -81,20 +86,20 @@ const BlogPage = () => {
             <BlogCard />
             <BlogCard />
             <BlogCard />
-          </div>
+          </div> */}
           
-          <div className="mt-20  flex justify-center">
+          {/* <div className="mt-20  flex justify-center">
             <a
               href="#"
               className="inline-flex items-center rounded-full bg-black px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800"
             >
               Load more
             </a>
-            </div>
+            </div> */}
            
         </FadeIn>
       </Container>
-      <DraggableCardDemo/>
+     
         
     </>
   );
