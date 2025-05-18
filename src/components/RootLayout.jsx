@@ -62,25 +62,7 @@ const Header = ({
             />
           
           </button>
-          {/* Toggle Button */}
-              {/* <motion.button
-                type="button"
-                onClick={() => setShowIncluded((prev) => !prev)}
-                className={`relative w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ${
-                  showIncluded ? "bg-green-600" : "bg-red-600"
-                }`}
-                initial={false}
-                animate={{ backgroundColor: showIncluded ? "#22c55e" : "#ef4444" }}
-              >
-                <motion.div
-                  layout
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                  className="w-4 h-4 bg-white rounded-full shadow-md"
-                  style={{
-                    x: showIncluded ? "24px" : "0px",
-                  }}
-                />
-              </motion.button> */}
+        
         </div>
         
       </div>
