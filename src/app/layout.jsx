@@ -3,6 +3,7 @@ import RootLayout from "@/components/RootLayout";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { Analytics } from '@vercel/analytics/next';
+import FloatingDockWrapper from "@/components/FloatingDockWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,9 @@ export default function Root({ children }) {
       </Head>
       <body className={`${inter.className} flex min-h-full flex-col`}>
         
-        <RootLayout>{children}
+        <RootLayout>
+          <FloatingDockWrapper/>
+          {children}
           <Analytics />
         </RootLayout>
       </body>

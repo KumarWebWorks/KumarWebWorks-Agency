@@ -56,21 +56,6 @@ export default function Home() {
         <Meta
  {...metadata}   
 />
- {/* <Head>
-        <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
-        <meta name="description" content="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Kumar Web Works – Top-Tier Web & App Development Agency" />
-        <meta property="og:description" content="Custom web and app development solutions tailored to your business needs." />
-        <meta property="og:image" content="https://kumarwebworks.com/favicon.ico" />
-        <meta property="og:url" content="https://www.kumarwebworks.com/" />
-        <meta property="og:site_name" content="Kumar Web Works" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kumar Web Works – Top-Tier Web & App Development Agency" />
-        <meta name="twitter:description" content="Custom web and app development solutions tailored to your business needs." />
-        <meta name="twitter:image" content="https://kumarwebworks.com/favicon.ico" />
-        <link rel="canonical" href="https://www.kumarwebworks.com/" />
-      </Head> */}
 
       <Script
   src="https://example.com/analytics.js"
@@ -79,7 +64,7 @@ export default function Home() {
     
     <main className="text-black">
       
-      <Container className="mt-24 sm:mt-32">
+      <Container className="mt-24 sm:mt-32 rounded-4xl">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
             Make your online presence a reality with us!
