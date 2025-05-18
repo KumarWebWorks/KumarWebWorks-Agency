@@ -17,7 +17,7 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
 const FloatingDockMobile = ({ items, className }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)} role="navigation" aria-label="Mobile navigation menu">
+    <div className={cn("relative block lg:hidden", className)} role="navigation" aria-label="Mobile navigation menu">
       <AnimatePresence>
         {open && (
           <motion.div
@@ -47,7 +47,7 @@ const FloatingDockMobile = ({ items, className }) => {
                   aria-label={item.title}
                   title={item.title}
                   role="menuitem"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900 focus:outline focus:outline-2 focus:outline-blue-500"
+                  className="flex h-10 w-10 items-center justify-center rounded-full  bg-neutral-900 focus:outline focus:outline-2 focus:outline-blue-500"
                 >
                   <div className="h-4 w-4" aria-hidden="true">{item.icon}</div>
                 </Link>
@@ -62,9 +62,9 @@ const FloatingDockMobile = ({ items, className }) => {
         aria-expanded={open}
         aria-controls="mobile-floating-menu"
         aria-label="Toggle mobile navigation menu"
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-400" />
       </button>
     </div>
   );
@@ -80,7 +80,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl  px-4 pb-3 md:flex bg-neutral-900",
         className
       )}
     >
@@ -119,7 +119,7 @@ function IconContainer({ mouseX, title, icon, href }) {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
         role="link"
       >
         <AnimatePresence>
@@ -128,7 +128,7 @@ function IconContainer({ mouseX, title, icon, href }) {
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs whitespace-pre text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white"
+              className="absolute -top-8 left-1/2 w-fit rounded-md border  px-2 py-0.5 text-xs whitespace-pre  border-neutral-900 bg-neutral-800 text-white"
               role="tooltip"
             >
               {title}
