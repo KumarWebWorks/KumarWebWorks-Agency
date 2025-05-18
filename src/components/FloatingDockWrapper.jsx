@@ -26,7 +26,7 @@ const FloatingDockWrapper = () => {
 
   return (
     <div
-      className={`fixed bottom-4 right-4 z-50 transition-opacity m-auto duration-500 ${
+      className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-500 ${
         isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
     >
