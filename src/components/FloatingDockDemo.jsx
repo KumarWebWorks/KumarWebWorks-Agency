@@ -3,17 +3,7 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconArticle,
-  IconBrandBlogger,
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandGmail,
-
-  IconBrandWhatsapp,
-  IconBrandX,
-
-  IconBrandZapier,
-
-  IconChecklist,
+ 
 
   IconCode,
 
@@ -21,13 +11,11 @@ import {
   
   IconMessageCircle,
   
-  IconProgressCheck,
-  
-  IconServicemark,
+
   
   IconTools,
   
-  IconUser,
+  
   IconUsers,
 } from "@tabler/icons-react";
 
