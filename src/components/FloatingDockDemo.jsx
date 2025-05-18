@@ -2,18 +2,33 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
+  IconArticle,
   IconBrandBlogger,
   IconBrandFacebook,
   IconBrandGithub,
   IconBrandGmail,
-  IconBrandKakoTalk,
+
   IconBrandWhatsapp,
   IconBrandX,
-  IconExchange,
+
+  IconBrandZapier,
+
+  IconChecklist,
+
+  IconCode,
+
   IconHome,
-  IconNewSection,
-  IconTerminal2,
+  
+  IconMessageCircle,
+  
+  IconProgressCheck,
+  
+  IconServicemark,
+  
+  IconTools,
+  
   IconUser,
+  IconUsers,
 } from "@tabler/icons-react";
 
 export function FloatingDockDemo() {
@@ -23,12 +38,12 @@ export function FloatingDockDemo() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
      {
       title: "Contact",
       icon: (
-        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMessageCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/contact",
     },
@@ -36,55 +51,50 @@ export function FloatingDockDemo() {
     {
       title: "Blog",
       icon: (
-        <IconBrandBlogger className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/blog",
     },
     {
-      title: "Whatsapp",
+      title: "Terminal",
       icon: (
-        <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/ai-code-editor",
     },
+    // {
+    //   title: "Work",
+    //   icon: (
+    //     <IconChecklist className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //     // <img
+    //     //   src="https://assets.aceternity.com/logo-dark.png"
+    //     //   width={20}
+    //     //   height={20}
+    //     //   alt="Aceternity Logo" />
+    //   ),
+    //   href: "#",
+    // },
     {
-      title: "Gmail",
+      title: "Process",
       icon: (
-        <IconBrandGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-        // <img
-        //   src="https://assets.aceternity.com/logo-dark.png"
-        //   width={20}
-        //   height={20}
-        //   alt="Aceternity Logo" />
+        <IconTools className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/process",
     },
-    {
-      title: "Facebook",
+     {
+      title: "About",
       icon: (
-        <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconUsers className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/about",
     },
     
 
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
+    
+   
   ];
   return (
-    <div className="flex items-center justify-center  w-full sticky top-0 z-50">
+    <div className="flex items-center justify-around  w-full sticky top-0 z-50">
      
       <FloatingDock
         // only for demo, remove for production

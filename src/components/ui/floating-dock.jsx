@@ -19,70 +19,59 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
     </>
   );
 };
-
 const FloatingDockMobile = ({ items, className }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+
   return (
     <div
-      className={cn("relative block lg:hidden", className)}
+      className={cn(
+        "w-full fixed bottom-4 left-0 z-50 flex flex-col items-center justify-around gap-auto md:hidden",
+        
+        className
+      )}
       role="navigation"
       aria-label="Mobile navigation menu"
     >
+      {/* Floating menu icons (in a row now) */}
       <AnimatePresence>
         {open && (
           <motion.div
             id="mobile-floating-menu"
             role="menu"
-            aria-label="Floating mobile dock"
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            className="flex flex-row gap-2 bg-neutral-900 p-3 rounded-xl shadow-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
           >
-            {items.map((item, idx) => (
-              <motion.div
+            {items.map((item) => (
+              <Link
+                href={item.href}
                 key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+                aria-label={item.title}
+                title={item.title}
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white"
               >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  aria-label={item.title}
-                  title={item.title}
-                  role="menuitem"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 focus:outline focus:outline-2 focus:outline-blue-500"
-                >
-                  <span className="sr-only">{item.title}</span>
-                  <div className="h-4 w-4 text-white" aria-hidden="true">
-                    {React.cloneElement(item.icon, { className: "text-white h-4 w-4" })}
-                  </div>
-                </Link>
-              </motion.div>
+                {React.cloneElement(item.icon, { className: "w-6 h-6" })}
+              </Link>
             ))}
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Toggle Button */}
       <button
         onClick={() => setOpen(!open)}
-        aria-expanded={open}
-        aria-controls="mobile-floating-menu"
-        aria-label={open ? "Close mobile navigation menu" : "Open mobile navigation menu"}
-        title={open ? "Close menu" : "Open menu"}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
+        aria-label="Toggle mobile menu"
+        className="h-12 w-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-white" />
+        <IconLayoutNavbarCollapse className="w-6 h-6" />
       </button>
     </div>
   );
 };
+
+
 
 const FloatingDockDesktop = ({ items, className }) => {
   let mouseX = useMotionValue(Infinity);

@@ -11,7 +11,7 @@ const FloatingDockWrapper = () => {
       const scrollY = window.scrollY || window.pageYOffset;
       const screenHeight = window.innerHeight;
 
-      if (scrollY > screenHeight * 1.1) {
+      if (scrollY > screenHeight * 0.2) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

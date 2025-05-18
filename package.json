@@ -10,6 +10,8 @@
     "postinstall": "flowbite-react patch"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@swc/wasm-web": "^1.11.24",
     "@tabler/icons-react": "^3.33.0",
     "@vercel/analytics": "^1.5.0",
     "autoprefixer": "10.4.15",
