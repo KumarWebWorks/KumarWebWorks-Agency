@@ -7,6 +7,7 @@ import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 import React from "react";
 import clsx from "clsx";
+import { DraggableCardDemo } from "@/components/DraggableCardDemo";
 
 
 
@@ -93,6 +94,7 @@ const BlogPage = () => {
            
         </FadeIn>
       </Container>
+      <DraggableCardDemo/>
         
     </>
   );
