@@ -1,7 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
-import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -17,7 +23,11 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
 const FloatingDockMobile = ({ items, className }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block lg:hidden", className)} role="navigation" aria-label="Mobile navigation menu">
+    <div
+      className={cn("relative block lg:hidden", className)}
+      role="navigation"
+      aria-label="Mobile navigation menu"
+    >
       <AnimatePresence>
         {open && (
           <motion.div
@@ -47,9 +57,12 @@ const FloatingDockMobile = ({ items, className }) => {
                   aria-label={item.title}
                   title={item.title}
                   role="menuitem"
-                  className="flex h-10 w-10 items-center justify-center rounded-full  bg-neutral-900 focus:outline focus:outline-2 focus:outline-blue-500"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 focus:outline focus:outline-2 focus:outline-blue-500"
                 >
-                  <div className="h-4 w-4" aria-hidden="true">{item.icon}</div>
+                  <span className="sr-only">{item.title}</span>
+                  <div className="h-4 w-4" aria-hidden="true">
+                    {item.icon}
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -61,7 +74,8 @@ const FloatingDockMobile = ({ items, className }) => {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-controls="mobile-floating-menu"
-        aria-label="Toggle mobile navigation menu"
+        aria-label={open ? "Close mobile navigation menu" : "Open mobile navigation menu"}
+        title={open ? "Close menu" : "Open menu"}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-400" />
@@ -80,7 +94,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl  px-4 pb-3 md:flex bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl px-4 pb-3 md:flex bg-neutral-900",
         className
       )}
     >
@@ -106,11 +120,27 @@ function IconContainer({ mouseX, title, icon, href }) {
   let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
   let heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
 
-  let width = useSpring(widthTransform, { mass: 0.1, stiffness: 150, damping: 12 });
-  let height = useSpring(heightTransform, { mass: 0.1, stiffness: 150, damping: 12 });
+  let width = useSpring(widthTransform, {
+    mass: 0.1,
+    stiffness: 150,
+    damping: 12,
+  });
+  let height = useSpring(heightTransform, {
+    mass: 0.1,
+    stiffness: 150,
+    damping: 12,
+  });
 
-  let widthIcon = useSpring(widthTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
-  let heightIcon = useSpring(heightTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
+  let widthIcon = useSpring(widthTransformIcon, {
+    mass: 0.1,
+    stiffness: 150,
+    damping: 12,
+  });
+  let heightIcon = useSpring(heightTransformIcon, {
+    mass: 0.1,
+    stiffness: 150,
+    damping: 12,
+  });
 
   return (
     <Link href={href} aria-label={title} title={title}>
@@ -122,13 +152,14 @@ function IconContainer({ mouseX, title, icon, href }) {
         className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
         role="link"
       >
+        <span className="sr-only">{title}</span>
         <AnimatePresence>
           {hovered && (
             <motion.div
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border  px-2 py-0.5 text-xs whitespace-pre  border-neutral-900 bg-neutral-800 text-white"
+              className="absolute -top-8 left-1/2 w-fit rounded-md border px-2 py-0.5 text-xs whitespace-pre border-neutral-900 bg-neutral-800 text-white"
               role="tooltip"
             >
               {title}
