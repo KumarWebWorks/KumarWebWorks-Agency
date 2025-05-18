@@ -28,7 +28,7 @@ export default function Root({ children }) {
       <body className={`${inter.className} flex min-h-full flex-col`}>
         
         <RootLayout>
-         <div className="flex justify-center">
+         <div className="fixed bottom-0 right-0 z-50 flex w-full max-w-[400px] flex-col items-center justify-center gap-4 p-4 lg:max-w-[500px]">
   <FloatingDockWrapper />
 </div>
           
