@@ -4,6 +4,8 @@ import {
   DraggableCardBody,
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
+import { Key } from "lucide-react";
+import Image from "next/image";
 
 export function DraggableCardDemo() {
   const items = [
@@ -58,8 +60,9 @@ export function DraggableCardDemo() {
         If its your first day at Fight Club, you have to fight.
       </p>
       {items.map((item) => (
-        <DraggableCardBody className={item.className}>
-          <img
+        
+        <DraggableCardBody className={item.className} key={item}>
+          <Image
             src={item.image}
             alt={item.title}
             className="pointer-events-none relative z-10 h-80 w-80 object-cover" />
@@ -68,6 +71,7 @@ export function DraggableCardDemo() {
             {item.title}
           </h3>
         </DraggableCardBody>
+        
       ))}
     </DraggableCardContainer>
   );
