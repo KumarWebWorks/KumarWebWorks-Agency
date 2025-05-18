@@ -37,3 +37,7 @@ next-env.d.ts
 /ai-code-editor
 # ignore all files in the ai-code-editor directory
 /ai-code-editor/*
+# Ignore environment files
+.env
+.local.env
+*.env.*
