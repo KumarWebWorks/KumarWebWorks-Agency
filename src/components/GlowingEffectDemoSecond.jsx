@@ -1,6 +1,13 @@
-"use client";;
+ 'use client';
+import { useRouter } from 'next/navigation';
+
+
+  
 import { Code, Server, Settings, PenTool, TerminalSquare } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+
+import { redirect } from "next/navigation";
+
 
 
 export function GlowingEffectDemoSecond() {
@@ -14,6 +21,7 @@ export function GlowingEffectDemoSecond() {
       description = "Articles on React, Vue, and UI design."
          imageSrc="/frontend-main.jpg"
            imageAlt="Example description"
+           href={"/blog/frontend"}
             />
       <GridItem
         area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
@@ -22,6 +30,7 @@ export function GlowingEffectDemoSecond() {
       description ="Node.js, Spring Boot, Databases."
          imageSrc="/backend-main.jpg"
            imageAlt="Example description"
+        href={"/blog/backend"}
         />
       <GridItem
         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
@@ -30,6 +39,7 @@ export function GlowingEffectDemoSecond() {
       description = "Docker, CI/CD, and deployments."
          imageSrc="/devops-main.jpg"
            imageAlt="Example description"
+        href={"/blog/devops"}
         />
       <GridItem
         area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
@@ -38,13 +48,16 @@ export function GlowingEffectDemoSecond() {
         icon={<PenTool className="h-4 w-4 text-black dark:text-neutral-400" />}
          title= "UI/UX"
       description= "Design systems, Figma, animations."
-        />
+        href={"/blog/uiux"}
+         /> 
+        
       <GridItem
         area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
         icon={<TerminalSquare className="h-4 w-4 text-black dark:text-neutral-400" />}
         title="The best AI code editor ever"
          imageSrc="/codeeditor-main.jpg"
            imageAlt="Example description"
+        href={"/ai-code-editor"}
         description="Experience real-time code suggestions, bug fixes, and smart refactoring—powered by cutting-edge AI. This is the future of development." />
     </ul>
   );
@@ -53,11 +66,20 @@ const GridItem = ({
   area,
   icon,
   title,
+  href,
   description,
   imageSrc, // background image
 }) => {
+   
+  const router = useRouter();
+
+  const handlePage = () => {
+    router.push(href); // href should be defined
+  };
+
   return (
-    <li className={`min-h-[14rem] list-none ${area}`}>
+    
+    <li  onClick={handlePage} className={`min-h-[14rem] list-none ${area}`}>
       <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
         <GlowingEffect
           blur={0}
@@ -94,5 +116,6 @@ const GridItem = ({
         </div>
       </div>
     </li>
+  
   );
 };
