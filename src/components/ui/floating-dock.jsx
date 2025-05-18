@@ -9,7 +9,7 @@ import {
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   return (
@@ -60,8 +60,8 @@ const FloatingDockMobile = ({ items, className }) => {
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 focus:outline focus:outline-2 focus:outline-blue-500"
                 >
                   <span className="sr-only">{item.title}</span>
-                  <div className="h-4 w-4" aria-hidden="true">
-                    {item.icon}
+                  <div className="h-4 w-4 text-white" aria-hidden="true">
+                    {React.cloneElement(item.icon, { className: "text-white h-4 w-4" })}
                   </div>
                 </Link>
               </motion.div>
@@ -78,7 +78,7 @@ const FloatingDockMobile = ({ items, className }) => {
         title={open ? "Close menu" : "Open menu"}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 focus:outline focus:outline-2 focus:outline-blue-500"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-5 w-5 text-white" />
       </button>
     </div>
   );
@@ -171,7 +171,7 @@ function IconContainer({ mouseX, title, icon, href }) {
           className="flex items-center justify-center"
           aria-hidden="true"
         >
-          {icon}
+          {React.cloneElement(icon, { className: "text-white" })}
         </motion.div>
       </motion.div>
     </Link>
