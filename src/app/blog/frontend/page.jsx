@@ -112,7 +112,7 @@ const FrontendBlogPage = () => {
           >
             <p>
               Explore practical tutorials, tips, and insights on HTML, CSS, JavaScript, and
-              modern frontend tools. Whether you're a beginner or a pro, there's something here
+              modern frontend tools. Whether you are a beginner or a pro, there is something here
               for every developer.
             </p>
           </SectionIntro>
