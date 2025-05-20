@@ -48,7 +48,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/ai-code-editor",
+      href: "/code",
     },
     // {
     //   title: "Work",
