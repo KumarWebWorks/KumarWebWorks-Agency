@@ -139,26 +139,62 @@ const blogContent = {
 // Dynamically load client component
  const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
 
-export function generateMetadata({ params }) {
-  const blog = blogContent[params.slug];
-    if (!blog) {
-    return {
-      title: 'Blog Not Found',
-      description: 'The requested blog post does not exist.',
-    };
-  }
+// export function generateMetadata({ params }) {
+//   const blog = blogContent[params.slug];
+//     if (!blog) {
+//     return {
+//       title: 'Blog Not Found',
+//       description: 'The requested blog post does not exist.',
+//     };
+//   }
 
-  return {
-    title: blog.title,
-    description: blog.description,
-    openGraph: {
-      title: blog.title,
-      description: blog.description,
-      url: `https://kumarwebworks.com/blog/frontend/${params.slug}`,
-      type: 'article',
-    },
-  };
-}
+//   return {
+//     title: blog.title,
+//     description: blog.description,
+//     openGraph: {
+//       title: blog.title,
+//       description: blog.description,
+//       url: `https://kumarwebworks.com/blog/frontend/${params.slug}`,
+//       type: 'article',
+//     },
+//   };
+// }
+const blog = blogContent["my-blog-post"];
+
+export const metadata = {
+  title: blog?.title || "Default Blog Title",
+  description: blog?.description || "Default description for the blog.",
+  metadataBase: new URL("https://kumarwebworks.com/blog/frontend/my-blog-post"),
+  alternates: {
+    canonical: "/blog/frontend/my-blog-post",
+  },
+  openGraph: {
+    title: blog?.title || "Default Blog Title",
+    description: blog?.description || "Default description for the blog.",
+    url: "https://kumarwebworks.com/blog/frontend/my-blog-post",
+    siteName: "Kumar Web Works",
+    type: "article",
+    images: [
+      {
+        url: "https://kumarwebworks.com/favicon.ico",
+        width: 800,
+        height: 600,
+        alt: "Kumar Web Works Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: blog?.title || "Default Blog Title",
+    description: blog?.description || "Default description for the blog.",
+    images: ["https://kumarwebworks.com/favicon.ico"],
+  },
+  robots: "index, follow",
+  keywords: "blog, Kumar Web Works, web development, articles",
+  type: "article",
+  locale: "en_US",
+};
+
 
 export default function BlogPostPage({ params }) {
   const blog = blogContent[params.slug];
