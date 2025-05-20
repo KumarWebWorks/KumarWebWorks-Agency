@@ -157,6 +157,76 @@ export function generateMetadata({ params }) {
   };
 }
 
+// export const metadata = {
+//   title: {blog.title},
+//   description: "Explore our portfolio of successful projects and discover how we can help you achieve your goals.",
+//   metadataBase: new URL("https://www.kumarwebworks.com/work"),
+//   alternates: {
+//     canonical: "/work",
+//   },
+//   openGraph: {
+//     title: "Our Work – Proven Solutions for Real-World Problems",
+//     description: "Explore our portfolio of successful projects and discover how we can help you achieve your goals.",
+//     url: "https://www.kumarwebworks.com/work",
+//     siteName: "Kumar Web Works",
+//     images: [
+//       {
+//         url: "https://www.kumarwebworks.com/favicon.ico",
+//         width: 800,
+//         height: 600,
+//         alt: "Kumar Web Works Logo",
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Our Work – Proven Solutions for Real-World Problems",
+//     description: "Explore our portfolio of successful projects and discover how we can help you achieve your goals.",
+//     images: ["https://www.kumarwebworks.com/favicon.ico"],
+//   },
+//   robots: "index, follow",
+//   keywords: "our work, Kumar Web Works, web development, portfolio, digital solutions",
+//   type: "website",
+//   locale: "en_US",
+//     };
+// Assuming blogContent is imported or available here and the slug is known, e.g. "my-blog-post"
+// const blog = blogContent["my-blog-post"];
+
+// export const metadata = {
+//   title: blog?.title || "Default Blog Title",
+//   description: blog?.description || "Default description for the blog.",
+//   metadataBase: new URL("https://kumarwebworks.com/blog/frontend/my-blog-post"),
+//   alternates: {
+//     canonical: "/blog/frontend/my-blog-post",
+//   },
+//   openGraph: {
+//     title: blog?.title || "Default Blog Title",
+//     description: blog?.description || "Default description for the blog.",
+//     url: "https://kumarwebworks.com/blog/frontend/my-blog-post",
+//     siteName: "Kumar Web Works",
+//     type: "article",
+//     images: [
+//       {
+//         url: "https://kumarwebworks.com/favicon.ico",
+//         width: 800,
+//         height: 600,
+//         alt: "Kumar Web Works Logo",
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: blog?.title || "Default Blog Title",
+//     description: blog?.description || "Default description for the blog.",
+//     images: ["https://kumarwebworks.com/favicon.ico"],
+//   },
+//   robots: "index, follow",
+//   keywords: "blog, Kumar Web Works, web development, articles",
+//   type: "article",
+//   locale: "en_US",
+// };
+
+
 export default function BlogPostPage({ params }) {
   const blog = blogContent[params.slug];
   if (!blog) return notFound();
