@@ -1,3 +1,5 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -8,7 +10,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.kumarwebworks.com/</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -21,52 +23,223 @@
   <!-- About Page -->
   <url>
     <loc>https://www.kumarwebworks.com/about</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-   <!-- Blog Page -->
+  <!-- Blog Landing Page -->
   <url>
     <loc>https://www.kumarwebworks.com/blog</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
- 
+  <!-- UIUX Blog Main Page -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/uiux</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/ui-design-principles</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/wireframing-prototyping</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/user-research-basics</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/accessibility-design</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+  
+    <loc>https://www.kumarwebworks.com/blog/frontend/design-systems</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+
+  
+  <!-- Frontend Blog Main Page -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/html-basics</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/css-grid-vs-flexbox</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/react-hooks-intro</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/nodejs-express-api</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/js-dom</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  
+  <!-- Backend Blog Main Page -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/backend</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/intro-to-nodejs</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/spring-boot-rest-api</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/mastering-databases</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/authentication-security</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/docker-for-devs</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+
+
+
+  
+  <!-- devops Blog Main Page -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/devops</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/github-actions-ci-cd</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/docker-basics</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/kubernetes-intro</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/terraform-iac</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.kumarwebworks.com/blog/frontend/monitoring-prometheus-grafana</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Contact Page -->
   <url>
     <loc>https://www.kumarwebworks.com/contact</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kumarwebworks.com/contact" />
-    
   </url>
 
-  <!-- Process Page  -->
+  <!-- Process Page -->
   <url>
     <loc>https://www.kumarwebworks.com/process</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kumarwebworks.com/process" />
-    
   </url>
 
-   <!-- Work Page  -->
+  <!-- Work Page -->
   <url>
     <loc>https://www.kumarwebworks.com/work</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.99</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kumarwebworks.com/work" />
-    
   </url>
-
- 
-
-  
 
 </urlset>

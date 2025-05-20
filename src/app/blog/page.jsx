@@ -7,7 +7,53 @@ import Meta from "@/components/Meta";
 import PageIntro from "@/components/PageIntro";
 import React from "react";
 import clsx from "clsx";
-import { GlowingEffectDemoSecond } from "@/components/GlowingEffectDemoSecond";
+import GlowingEffectGrid from "@/components/GlowingEffectGrid";
+
+import { Code, Server, Settings, PenTool, TerminalSquare } from 'lucide-react';
+
+const gridItems = [
+  {
+    area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
+    icon: <Code className="h-4 w-4 text-black dark:text-neutral-400" />,
+    title: "Frontend",
+    description: "Articles on React, Vue, and UI design.",
+    imageSrc: "/frontend-main.jpg",
+    href: "/blog/frontend",
+  },
+  {
+    area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
+    icon: <Server className="h-4 w-4 text-black dark:text-neutral-400" />,
+    title: "Backend",
+    description: "Node.js, Spring Boot, Databases.",
+    imageSrc: "/backend-main.jpg",
+    href: "/blog/backend",
+  },
+  {
+    area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
+    icon: <Settings className="h-4 w-4 text-black dark:text-neutral-400" />,
+    title: "DevOps",
+    description: "Docker, CI/CD, and deployments.",
+    imageSrc: "/devops-main.jpg",
+    href: "/blog/devops",
+  },
+  {
+    area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
+    icon: <PenTool className="h-4 w-4 text-black dark:text-neutral-400" />,
+    title: "UI/UX",
+    description: "Design systems, Figma, animations.",
+    imageSrc: "/uiux-main.jpg",
+    href: "/blog/uiux",
+  },
+  {
+    area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
+    icon: <TerminalSquare className="h-4 w-4 text-black dark:text-neutral-400" />,
+    title: "The best AI code editor ever",
+    description:
+      "Experience real-time code suggestions, bug fixes, and smart refactoring—powered by cutting-edge AI. This is the future of development.",
+    imageSrc: "/codeeditor-main.jpg",
+    href: "/ai-code-editor",
+  },
+];
 
 
 
@@ -72,30 +118,11 @@ const BlogPage = () => {
 
 
        <div >
-  <GlowingEffectDemoSecond className="dark"/>
+  {/* <GlowingEffectDemoSecond /> */}
+  <GlowingEffectGrid className="dark" items={gridItems} />
 </div>
 
-          
-          {/* <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-12 md:gap-y-8  lg:gap-x-8 md:gap-x-6 gap-8 p-2">
-
-             
-            
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-          </div> */}
-          
-          {/* <div className="mt-20  flex justify-center">
-            <a
-              href="#"
-              className="inline-flex items-center rounded-full bg-black px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800"
-            >
-              Load more
-            </a>
-            </div> */}
+       
            
         </FadeIn>
       </Container>

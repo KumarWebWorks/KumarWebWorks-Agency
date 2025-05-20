@@ -25,4 +25,5 @@ module.exports = {
     },
   },
   plugins: [flowbiteReact],
+  plugins: [require('@tailwindcss/typography')],
 };
