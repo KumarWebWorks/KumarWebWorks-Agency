@@ -187,7 +187,26 @@ const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ss
 //   type: "article",
 //   locale: "en_US",
 // };
+export function generateMetadata({ params }) {
+  const blog = blogContent[params.slug];
+    if (!blog) {
+    return {
+      title: 'Blog Not Found',
+      description: 'The requested blog post does not exist.',
+    };
+  }
 
+  return {
+    title: blog.title,
+    description: blog.description,
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      url: `https://kumarwebworks.com/blog/frontend/${params.slug}`,
+      type: 'article',
+    },
+  };
+}
 
 export default function BlogPostPage({ params }) {
   const blog = blogContent[params.slug];
