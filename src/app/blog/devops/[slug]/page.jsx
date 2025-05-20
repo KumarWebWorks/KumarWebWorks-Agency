@@ -92,6 +92,7 @@
 
 
 
+// import BlogPostClient from '@/components/BlogPostClient';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 const blogContent = {
@@ -129,11 +130,16 @@ const blogContent = {
 
 
 // Dynamically load client component
- const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
+const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
 
 export function generateMetadata({ params }) {
   const blog = blogContent[params.slug];
-  if (!blog) return <h1>blog not foud</h1>;
+    if (!blog) {
+    return {
+      title: 'Blog Not Found',
+      description: 'The requested blog post does not exist.',
+    };
+  }
 
   return {
     title: blog.title,
