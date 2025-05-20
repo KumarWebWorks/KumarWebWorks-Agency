@@ -292,7 +292,7 @@
 // };
 
 // export default FrontendBlogPage;
-"use client";
+// "use client";
 
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
