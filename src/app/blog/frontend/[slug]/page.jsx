@@ -96,8 +96,10 @@
 // }
 
 
-import dynamic from 'next/dynamic';
+import BlogPostClient from '@/components/BlogPostClient';
+// import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
+
 
 const blogContent = {
   'html-basics': {
@@ -135,7 +137,7 @@ const blogContent = {
 
 
 // Dynamically load client component
- const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
+ //const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
 
 export function generateMetadata({ params }) {
   const blog = blogContent[params.slug];
@@ -158,6 +160,9 @@ export default function BlogPostPage({ params }) {
   if (!blog) return notFound();
 
   return (
-       <BlogPostClient blog={blog} />
+    <>
+     <BlogPostClient blog={blog} />
+    </>
+      
   )
 }

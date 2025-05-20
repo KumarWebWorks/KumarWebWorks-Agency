@@ -102,6 +102,7 @@
 
 // src/app/blog/frontend/[slug]/page.jsx
 
+import BlogPostClient from '@/components/BlogPostClient';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 
@@ -139,7 +140,7 @@ const blogContent = {
 };
 
 // Dynamically load client component
- const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
+ //const BlogPostClient = dynamic(() => import('@/components/BlogPostClient'), { ssr: false });
 
 export function generateMetadata({ params }) {
   const blog = blogContent[params.slug];
