@@ -4,13 +4,13 @@
 import { createClient } from "@supabase/supabase-js";
 
 
-const supabaseUrl = "https://mpubpekirhwbtmukbxfc.supabase.co";
+// const supabaseUrl = "https://mpubpekirhwbtmukbxfc.supabase.co";
 
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-if (!supabaseUrl || !supabaseAnonKey) { 
-  throw new Error("Supabase URL or Anon Key is not defined");
-}
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+// if (!supabaseUrl || !supabaseAnonKey) { 
+//   throw new Error("Supabase URL or Anon Key is not defined");
+// }
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_url, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
 
 
