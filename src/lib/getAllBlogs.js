@@ -7,7 +7,7 @@ import { createClient } from "@supabase/supabase-js";
 const supabaseUrl = process.env.supabaseUrl;
 
 const supabaseAnonKey = process.env.supabaseAnonKey;
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!supabaseUrl || !supabaseAnonKey) { 
   throw new Error("Supabase URL or Anon Key is not defined");
 }
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
