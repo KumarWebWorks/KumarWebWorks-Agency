@@ -110,7 +110,7 @@ const BlogCategoryPage = async ({ params }) => {
   }
 
   const allBlogs = await getAllBlogs();
-  const filteredBlogs = allBlogs.data.filter(
+  const filteredBlogs = allBlogs.filter(
     (blog) => blog.category === category
   );
 
