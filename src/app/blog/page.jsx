@@ -1,5 +1,5 @@
 
-import BlogCard from "@/components/BlogCard";
+
 
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";

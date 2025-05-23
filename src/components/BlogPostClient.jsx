@@ -8,7 +8,7 @@ import SectionIntro from './SectionIntro';
 
 
 
-export default function BlogLayout({ blog,id }) {
+export default function BlogLayout({ blog }) {
   const contentRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(null);
 

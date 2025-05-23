@@ -128,5 +128,5 @@ export default async function BlogPostPage({ params }) {
   if (!blog) return notFound();
 
 
-  return <BlogPostClient blog={blog} id={blog.id} />;
+  return <BlogPostClient blog={blog} />;
 }
