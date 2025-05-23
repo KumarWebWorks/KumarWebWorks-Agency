@@ -4,10 +4,11 @@
 import { useRef, useEffect, useState } from 'react';
 import Container from './Container';
 import SectionIntro from './SectionIntro';
-import { Server, Braces, Database, Shield, Settings , Eye } from "lucide-react";
-import { increaseBlogView } from '@/lib/increseViews';
 
-export default function BlogLayout({ blog }) {
+
+
+
+export default function BlogLayout({ blog,id }) {
   const contentRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -17,7 +18,9 @@ export default function BlogLayout({ blog }) {
     contentRef.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+
   useEffect(() => {
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, idx) => {
@@ -31,11 +34,11 @@ export default function BlogLayout({ blog }) {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-  if (blog?.id) {
-    increaseBlogView(blog.id);
-  }
-}, [blog.id]);
+
+
+
+
+
 
 
 
@@ -63,11 +66,11 @@ export default function BlogLayout({ blog }) {
            
           </div>
         </div>
-        <div className="text-right text-sm text-gray-600 dark:text-gray-400">
-          <p> <Eye size={16} /> {blog.views || 10} views</p>
+        {/* <div className="text-right text-sm text-gray-600 dark:text-gray-400">
+          <p> <Eye size={16} /> {blog.views} views</p>
           
          
-        </div>
+        </div> */}
       </header> 
     <div className=" mt-5 relative flex flex-col md:flex-row w-full">
       {/* Sticky Header
