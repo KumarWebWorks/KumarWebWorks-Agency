@@ -8,3 +8,7 @@
   font-stretch: 75% 125%;
   src: url("../fonts//Mona-Sans.var.woff2");
 }
+
+html {
+  scroll-behavior: smooth;
+}

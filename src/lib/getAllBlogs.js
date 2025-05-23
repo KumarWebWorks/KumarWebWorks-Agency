@@ -1,25 +1,41 @@
 // lib/getAllBlogs.ts
 
-
-import { createClient } from "@supabase/supabase-js";
-// NEXT_PUBLIC_SUPABASE_url = https://mpubpekirhwbtmukbxfc.supabase.co
-// NEXT_PUBLIC_SUPABASE_ANON_KEY = 
+import { supabase } from "./superbaseConfig";
 
 
-const supabaseUrl =process.env.SUPABASE_url;
 
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
-
-
-if (!supabaseUrl || !supabaseAnonKey) { 
-  throw new Error("Supabase URL or Anon Key is not defined");
-}
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 
 
 export async function getAllBlogs() {
-  const { data, error } = await supabase.from('blogs').select('*');
+  // const { data, error } = await supabase.from('blogs').select('*');
+  // const { data, error } = await supabase
+  // .from("blogs")
+  // .select("id, title, category, description, content, slug , subtopic ,created_at");
+
+   const { data, error } = await supabase
+  .from('blogs')
+  .select(`
+    id,
+    title,
+    description,
+    content,
+    slug,
+    image_url,
+    views,
+    subtopic,
+    category,
+    
+
+    author_name,
+    author_image,
+    comments,
+    created_at
+  `)
+  // Newest first
+  .limit(100); // Limit to the latest 100 blogs
+
+
 
 
   if (error) {
@@ -27,6 +43,6 @@ export async function getAllBlogs() {
     return [];
   }
 
-  
+  //  console.log('Fetched blogs:', data);
   return data;
 }

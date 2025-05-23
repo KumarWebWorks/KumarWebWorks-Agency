@@ -14,6 +14,8 @@ export async function generateMetadata({ params }) {
   const allBlogs = await getAllBlogs();
   const backendBlogs = allBlogs.filter(blog => blog.category === params.category);
 
+
+
    const blog = backendBlogs.find(b => b.slug === params.slug);
 
   if (!blog) {
@@ -22,6 +24,8 @@ export async function generateMetadata({ params }) {
       description: 'The requested blog post does not exist.',
     };
   }
+
+  
 
   return {
     title: blog.title,
@@ -56,6 +60,7 @@ export default async function BlogPostPage({ params }) {
  
 
   if (!blog) return notFound();
-
-  return <BlogPostClient blog={blog} />;
+   console.log('Blog post:', blog);
+  return (<BlogPostClient blog={blog} />);
+   
 }

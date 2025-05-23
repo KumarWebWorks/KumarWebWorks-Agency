@@ -22,6 +22,8 @@ export default function Root({ children }) {
         <meta name="description" content="Custom web and app development solutions tailored to your business needs. From UI/UX to full-stack engineering. Get results with Kumar Web Works." />
         <meta name="keywords" content="kumar, kumarweb, kumarwebworks , website kumar , kumar website , kumarweb website , kumar portfolio , web devlopment , app devlopment , web agency" />
         <meta name="author" content="Sahil Kumar" />
+      
+        <meta name="robots" content="index, follow" />
         <title>Kumar Web Works – Top-Tier Web & App Development Agency</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
