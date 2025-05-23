@@ -4,6 +4,7 @@
 import { useRef, useEffect, useState } from 'react';
 import Container from './Container';
 import SectionIntro from './SectionIntro';
+import Image from 'next/image';
 
 
 
@@ -54,7 +55,7 @@ export default function BlogLayout({ blog }) {
 
              <header className="mt-11 z-20 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 p-4 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-4">
-          <img
+          <Image
             src={blog.author_image || '/laptop.jpg'}
             alt="Author"
             className="w-10 h-10 rounded-full"
