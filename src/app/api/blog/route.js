@@ -1,4 +1,5 @@
 // src/app/api/blog/route.js
+export const dynamic = 'force-dynamic';
 import { supabase } from "@/lib/superbaseConfig";
 
 export async function GET() {
