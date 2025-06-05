@@ -267,9 +267,11 @@ const BlogCategoryPage = async ({ params }) => {
     throw new Error("Failed to fetch blogs");
   }
   const { data: allBlogs } = await res.json();
+  console.log("Fetched blogs:", allBlogs);
 
   // Filter blogs by category param
   const filteredBlogs = allBlogs.filter((blog) => blog.category === params.category);
+  console.log("Filtered blogs:", filteredBlogs);
 
   const gridItems = filteredBlogs.map((post, index) => {
     const Icon = iconComponents[index % iconComponents.length];
