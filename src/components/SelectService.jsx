@@ -73,6 +73,7 @@ export default function SelectService() {
   return (
     <div>
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <legend className="text-base/6 text-neutral-500">Service</legend>
         {serviceDescriptions.map((service, index) => (
           <label key={index} className="flex gap-x-3 cursor-pointer">
             <input
