@@ -269,7 +269,7 @@ const BlogCategoryPage = async ({ params }) => {
   const { data: allBlogs } = await res.json();
 
   // Filter blogs by category param
-  const filteredBlogs = allBlogs.filter((blog) => blog.category === category);
+  const filteredBlogs = allBlogs.filter((blog) => blog.category === params.category);
 
   const gridItems = filteredBlogs.map((post, index) => {
     const Icon = iconComponents[index % iconComponents.length];
