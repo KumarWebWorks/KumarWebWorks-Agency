@@ -1,115 +1,131 @@
- "use client"
-import React, { use } from "react";
+"use client"
+import React, { useState } from "react";
+import { supabase } from "@/lib/superbaseConfig";
 import FadeIn from "./FadeIn";
 import TextInput from "./TextInput";
 import RadioInput from "./RadioInput";
 import Button from "./Button";
 import serviceDescriptions from "@/config/serviceDescriptions";
-import SelectService from "./SelectService";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    budget: "",
+    message: ""
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const { error } = await supabase.from("contact").insert([formData]);
+
+    setLoading(false);
+    if (error) {
+      alert("Error submitting form");
+      console.error(error);
+    } else {
+      setSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        budget: "",
+        message: ""
+      });
+    }
+  };
 
   const data = serviceDescriptions;
-  
-    
 
-  
   return (
     <FadeIn>
-      <form action="https://formsubmit.co/kumarwebworks@gmail.com" method="POST"
-      
-      >
+      <form onSubmit={handleSubmit}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" required />
-          <TextInput
-            label="Email"
-            type="email"
-            name="email"
-            autoComplete="email"
-            required
-          />
-          <TextInput
-            label="Company"
-            name="company"
-            autoComplete="organization"
-            required
-          />
-          <TextInput
-            label="Phone"
-            type="tel"
-            name="phone"
-            autoComplete="tel"
-            required
-          />
-          
-          
-           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-           
-          
-             <SelectService/>
-              
-              
-              
-              
-          
-              
-            
-            </div>
 
-          <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
+        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+          <TextInput label="Name" name="name" value={formData.name} onChange={handleChange} required />
+          <TextInput label="Email" type="email" name="email" value={formData.email} onChange={handleChange} required />
+          <TextInput label="Company" name="company" value={formData.company} onChange={handleChange} required />
+          <TextInput label="Phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
+
+          <div className="border border-neutral-300 px-6 py-8">
+            <fieldset>
+              <legend className="text-base/6 text-neutral-500">Service</legend>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {["Website", "App", "Desktop Software", "Custom Software"].map((service) => (
+                  <RadioInput
+                    key={service}
+                    label={`${service} Development`}
+                    name="service"
+                    value={service}
+                    checked={formData.service === service}
+                    onChange={handleChange}
+                    required
+                  />
+                ))}
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="border border-neutral-300 px-6 py-8">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {[
+                  { label: "₹5,000 – ₹10,000", value: "5-10" },
+                  { label: "₹10,000 – ₹25,000", value: "10-25" },
+                  { label: "₹25,000 – ₹50,000", value: "25-50" },
+                  { label: "More than ₹50,000", value: "50-100" },
+                ].map(({ label, value }) => (
+                  <RadioInput
+                    key={value}
+                    label={label}
+                    name="budget"
+                    value={value}
+                    checked={formData.budget === value}
+                    onChange={handleChange}
+                    required
+                  />
+                ))}
+              </div>
             </fieldset>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <RadioInput
-                label="₹5,000 – ₹10,000"
-                name="budget"
-                value="5-10"
-                required
-                
-                
-              />
-              <RadioInput
-                label="₹10,000 – ₹25,000"
-                name="budget"
-                value="10-25"
-              />
-              <RadioInput
-                label="₹25,000 – ₹50,000"
-                name="budget"
-                value="25-50"
-              />
-              <RadioInput
-                label="More than ₹50,000"
-                name="budget"
-                value="50-100"
-              />
-            </div>
-            
-            <input type="text" name="_honey" className="hidden" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="_next"
-              value="http://kumarwebworks.com/thanks"
-            />
           </div>
-           <TextInput label="Message" name="message" required />
-        </div>
+
+          <TextInput label="Message" name="message" value={formData.message} onChange={handleChange} required />
+
           <fieldset className=" mt-5 px-6 py-4">
-              <legend className= " text-sm/4 text-neutral-500"> Note: If your project serves humanity or contributes to the well-being of others — and lacks a profitable motive — we would be honored to support you free of cost. Let’s build something meaningful together. 
-       </legend>
-            </fieldset>
-           
-            
-        <Button type="submit" className=""
-        
-        >
-          Let’s work together
-        </Button>
+            <legend className=" text-sm/4 text-neutral-500">
+              Note: If your project serves humanity or contributes to the well-being of others — and lacks a profitable motive — we would be honored to support you free of cost. Let’s build something meaningful together.
+            </legend>
+          </fieldset>
+
+          <Button type="submit" disabled={loading}>
+            {loading ? "Sending..." : "Let’s work together"}
+          </Button>
+
+          {success && (
+            <p className="text-green-600 mt-4">
+              ✅ Message sent successfully!
+            </p>
+          )}
+        </div>
       </form>
     </FadeIn>
   );

@@ -1,13 +1,15 @@
+import Button from "@/components/Button";
 import Clients from "@/components/Clients";
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
+
 import Meta from "@/components/Meta";
 import SectionIntro from "@/components/SectionIntro";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
-import Head from "next/head";
+
 import Script from "next/script";
 
 
@@ -80,8 +82,27 @@ export default function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>Get a stunning website, powerful mobile app, or tailor-made desktop software — delivered fast and built to scale.
-</p>
+</p>   
+      <div className="flex justify-end mt-4 sm:mt-6 lg:mt-8">
+<Button
+  type="submit"
+  className="bg-gradient-to-b from-neutral-900 to-black text-white px-6 py-2  shadow-inner border border-neutral-800 hover:brightness-110 transition duration-300 backdrop-blur-sm"
+>
+  Book a Free Consultation
+</Button>
+
+</div>
       </SectionIntro>
+      {/* <div className="flex justify-end ">
+  <Button type="submit" className="">
+    Book a Free Consultation
+  </Button>
+</div> */}
+
+
+
+
+
         </FadeIn>
       </Container>
       <Clients />
