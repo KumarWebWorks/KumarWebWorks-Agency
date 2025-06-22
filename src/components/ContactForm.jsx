@@ -129,7 +129,7 @@ const ContactForm = () => {
             
             <PageIntro >
               <h1  >Thank You</h1>
-        <p>       we'll contact you within an hour.       </p>
+        <p>       we &rsquo; ll contact you within an hour.       </p>
       </PageIntro>
            
           )}
