@@ -3,6 +3,7 @@ import Container from "./Container";
 import FadeIn from "./FadeIn";
 import Button from "./Button";
 import Offices from "./Offices";
+import Link from "next/link";
 
 const ContactSection = () => {
   return (
@@ -13,8 +14,14 @@ const ContactSection = () => {
             Tell us about your project
           </h2>
           <div className="mt-6 flex">
-            <Button href={"/contact"} invert>
-              Say Hello
+            <Button  invert>
+            <Link href={"https://wa.me/919942488298?text=Hello"} 
+        target="_blank"
+  rel="noopener noreferrer"
+        >
+        Say Hello
+        </Link>
+              
             </Button>
           </div>
           <div className="mt-10 border-t border-white/10 pt-10">

@@ -6,8 +6,11 @@ import TextInput from "./TextInput";
 import RadioInput from "./RadioInput";
 import Button from "./Button";
 import serviceDescriptions from "@/config/serviceDescriptions";
+import PageIntro from "./PageIntro";
+
 
 const ContactForm = () => {
+   
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,16 +66,16 @@ const ContactForm = () => {
           <TextInput label="Name" name="name" value={formData.name} onChange={handleChange} required />
           <TextInput label="Email" type="email" name="email" value={formData.email} onChange={handleChange} required />
           <TextInput label="Company" name="company" value={formData.company} onChange={handleChange} required />
-          <TextInput label="Phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
+          <TextInput label="Phone" type="tel" name="phone" value={formData.phone} onChange={handleChange}  />
 
           <div className="border border-neutral-300 px-6 py-8">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Service</legend>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {["Website", "App", "Desktop Software", "Custom Software"].map((service) => (
+                {["Website Development", "App Development", "Desktop Software ", "Other"].map((service) => (
                   <RadioInput
                     key={service}
-                    label={`${service} Development`}
+                    label={`${service} `}
                     name="service"
                     value={service}
                     checked={formData.service === service}
@@ -84,10 +87,10 @@ const ContactForm = () => {
             </fieldset>
           </div>
 
-          <div className="border border-neutral-300 px-6 py-8">
+          <div className="hidden border border-neutral-300 px-6 py-8">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className=" mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {[
                   { label: "₹5,000 – ₹10,000", value: "5-10" },
                   { label: "₹10,000 – ₹25,000", value: "10-25" },
@@ -109,6 +112,7 @@ const ContactForm = () => {
           </div>
 
           <TextInput label="Message" name="message" value={formData.message} onChange={handleChange} required />
+          <br />
 
           <fieldset className=" mt-5 px-6 py-4">
             <legend className=" text-sm/4 text-neutral-500">
@@ -119,11 +123,17 @@ const ContactForm = () => {
           <Button type="submit" disabled={loading}>
             {loading ? "Sending..." : "Let’s work together"}
           </Button>
+          <br />
 
           {success && (
-            <p className="text-green-600 mt-4">
-              ✅ Message sent successfully!
-            </p>
+            
+            <PageIntro >
+              <h1  >Thank You</h1>
+        <p>
+        we'll contact you within an hour.
+        </p>
+      </PageIntro>
+           
           )}
         </div>
       </form>

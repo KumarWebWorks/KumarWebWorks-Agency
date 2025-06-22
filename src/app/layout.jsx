@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import { Analytics } from '@vercel/analytics/next';
 import FloatingDockWrapper from "@/components/FloatingDockWrapper";
+import { StickyBannerDemo } from "@/components/StickyBannerDemo";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +31,10 @@ export default function Root({ children }) {
       </Head>
       <body className={`${inter.className} flex min-h-full flex-col`}>
         
+        <div className="hidden md:block">
+        <StickyBannerDemo/>
+        </div>
+        
         <RootLayout>
          <div >
   <FloatingDockWrapper />
@@ -37,6 +43,7 @@ export default function Root({ children }) {
           {children}
           <Analytics />
         </RootLayout>
+        
       </body>
     </html>
    

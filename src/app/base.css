@@ -13,6 +13,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 @layer base {
   .theme {
     --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;

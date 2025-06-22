@@ -1,16 +1,24 @@
-import Button from "@/components/Button";
+
 import Clients from "@/components/Clients";
 import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
+import { StickyBannerDemo } from "@/components/StickyBannerDemo";
 import FadeIn from "@/components/FadeIn";
 
 import Meta from "@/components/Meta";
+import MovingBorderDemo from "@/components/MovingBorderDemo";
+
+
 import SectionIntro from "@/components/SectionIntro";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
+
 import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
 
+
+
 import Script from "next/script";
+import { WhyUs } from "@/components/WhyUs";
 
 
 
@@ -55,6 +63,7 @@ export default function Home() {
   return (
     <>
     
+    
        
         <Meta
  {...metadata}   
@@ -64,10 +73,11 @@ export default function Home() {
   src="https://example.com/analytics.js"
   strategy="lazyOnload"
 />
+     
     
     <main className="text-black">
       
-      <Container className="mt-24 sm:mt-32 rounded-4xl">
+      <Container className=" mt-24 sm:mt-32 rounded-4xl">
         <FadeIn className="max-w-3xl">
           {/* <h1 className="font-display text-4xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
             Make your online presence a reality with us!
@@ -79,32 +89,46 @@ export default function Home() {
            <SectionIntro
         eyebrow="🟢 Available"
         title="Make your online presence a reality with us!"
-        className="mt-24 sm:mt-32 lg:mt-40"
+        className="mt-24 sm:mt-32 lg:mt-32"
       >
         <p>Get a stunning website, powerful mobile app, or tailor-made desktop software — delivered fast and built to scale.
-</p>   
-      <div className="flex justify-end mt-4 sm:mt-6 lg:mt-8">
-<Button
+</p>   <br />
+{/* <Button
   type="submit"
   className="bg-gradient-to-b from-neutral-900 to-black text-white px-6 py-2  shadow-inner border border-neutral-800 hover:brightness-110 transition duration-300 backdrop-blur-sm"
 >
   Book a Free Consultation
-</Button>
+</Button> */}
+{/* <Link href="/contact" className="pulse-button inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-black bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 border border-gray-400 rounded-full shadow-md hover:scale-105 hover:shadow-xl hover:bg-gradient-to-r hover:from-green-300 hover:to-green-400 transition-all duration-300 ease-in-out">
+  Grow Your Business with Tech
+</Link> */}
 
-</div>
-      </SectionIntro>
-      {/* <div className="flex justify-end ">
-  <Button type="submit" className="">
-    Book a Free Consultation
-  </Button>
+      {/* <div className="flex justify-end mt-4 sm:mt-6 lg:mt-8">
+
+
 </div> */}
+      </SectionIntro>
+     
+     
+      
+         
 
 
 
 
 
+          
         </FadeIn>
+        <FadeIn>
+          <div class="flex justify-center">
+  <div class="w-fit">
+    <MovingBorderDemo/>
+  </div>
+</div>
+        </FadeIn>
+             
       </Container>
+       
       <Clients />
       <Testimonials
         className="mt-24 sm:mt-32 lg:mt-40"
@@ -115,6 +139,7 @@ export default function Home() {
         those annoying permission dialogs.
       </Testimonials>
       <Services />
+      <WhyUs/>
       <ContactSection />
     </main>
     </>
