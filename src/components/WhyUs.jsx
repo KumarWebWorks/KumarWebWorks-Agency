@@ -3,6 +3,7 @@ import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
+import Image from "next/image";
 
 
 
@@ -13,7 +14,7 @@ const content = [
     "We believe everyone deserves a strong digital presence. That’s why we offer a fully designed, mobile-friendly one-page website absolutely free — no hidden charges, no catch. Ideal for startups, freelancers, or small businesses looking to make their mark online.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/freewebsite.jpg"
           width={400}
           height={600}
@@ -27,7 +28,7 @@ const content = [
       "We don’t just jump into design or development. First, we understand your business goals, challenges, and ideal audience. This ensures that every feature we build directly supports your growth and creates real value for your brand.",
   content: (
       <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/detailmeeting.jpg"
           width={300}
           height={300}
@@ -42,7 +43,7 @@ const content = [
       "KUMARWEBWORKS is your one-stop solution for all things digital. From custom websites and mobile apps to desktop software and admin dashboards — everything is handled under one roof by passionate professionals who care about your success.",
   content: (
        <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/studio.jpg"
           width={300}
           height={300}
@@ -58,7 +59,7 @@ const content = [
       "Speed matters in business. We use modern tools and a streamlined process to deliver projects faster than traditional agencies — without sacrificing quality. You get your product up and running sooner, so you can start growing right away.",
    content: (
        <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/light.jpg"
           width={300}
           height={300}
@@ -73,7 +74,7 @@ const content = [
       "Your audience is on mobile, and Google rewards mobile-ready websites. We build responsive, mobile-first designs that not only look amazing on all devices but are also optimized to get discovered through search engines and drive organic traffic.",
   content: (
        <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/seo.jpg"
           width={300}
           height={300}
@@ -88,7 +89,7 @@ const content = [
       "No outdated templates or cluttered layouts. We craft beautiful, modern designs from scratch that reflect your brand’s personality, engage your users, and drive more conversions — whether that’s getting calls, bookings, or sales.",
   content: (
        <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/modern.jpg"
           width={300}
           height={300}
@@ -103,7 +104,7 @@ const content = [
       "Unlike big agencies where your message gets lost in layers, we let you speak directly with the team building your solution. This ensures faster decisions, clearer understanding, and better outcomes without delays or confusion.",
    content: (
        <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/call.jpg"
           width={300}
           height={300}
@@ -118,7 +119,7 @@ const content = [
       "Whether you’re bootstrapping or scaling up, we offer flexible pricing based on your exact needs. No inflated fees or vague estimates — just honest rates, clear deliverables, and full ownership of your product once it’s live.",
   content: (
        <div className="flex h-full w-full items-center justify-center text-white">
-        <img
+        <Image
           src="/price.jpg"
           width={300}
           height={300}
